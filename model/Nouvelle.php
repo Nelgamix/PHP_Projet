@@ -33,12 +33,49 @@ class Nouvelle {
     function update(DOMElement $item) {
 
         $nodeList = $item->getElementsByTagName('title');
-        $this->titre    = $nodeList->item(0)->textContent;
+        $this->title    = $nodeList->item(0)->textContent;
 
+        $nodeList = $item->getElementsByTagName('description');
+        $this->description  = $nodeList->item(0)->textContent;
+        
         $nodeList = $item->getElementsByTagName('pubDate');
-        $this->date  = $nodeList->item(0)->textContent;
+        $this->pubDate  = $nodeList->item(0)->textContent;
+        
+        //$nodeList = $item->getElementsByTagName('guid');
+        //$this->guid  = $nodeList->item(0)->textContents;
+        
+        $nodeList = $item->getElementsByTagName('enclosure');
+        $this->enclosure  = $nodeList->item(0)->textContent;
         
       }
-    
-    
+      
+      function downloadImage(DOMElement $item, $imageId){
+      
+        // On suppose que $node est un objet sur le noeud 'enclosure' d'un flux RSS
+        // On tente d'accéder à l'attribut 'url'
+        $node = $item->getElementsByTagName('enclosure');
+        $node = $node->item(0)->attributes->getNamedItem('url');
+        if ($node != NULL) {
+              // L'attribut url a été trouvé : on récupère sa valeur, c'est l'URL de l'image
+              $url = $node->nodeValue;
+              // On construit un nom local pour cette image : on suppose que $nomLocalImage contient un identifiant unique
+              $this->image = 'images/'.$imageId.'.jpg';
+              file_put_contents($this->image, file_get_contents($url));     
+        }
+      }
+      
+      function downloadImages(DOMElement $item, $imageId){
+      
+        // On suppose que $node est un objet sur le noeud 'enclosure' d'un flux RSS
+        // On tente d'accéder à l'attribut 'url'
+        $node = $item->getElementsByTagName('enclosure');
+        $node = $node->item(0)->attributes->getNamedItem('url');
+        if ($node != NULL) {
+              // L'attribut url a été trouvé : on récupère sa valeur, c'est l'URL de l'image
+              $url = $node->nodeValue;
+              // On construit un nom local pour cette image : on suppose que $nomLocalImage contient un identifiant unique
+              $this->image = 'images/'.$imageId.'.jpg';
+              file_put_contents($this->image, file_get_contents($url));     
+        }
+      }
 }
