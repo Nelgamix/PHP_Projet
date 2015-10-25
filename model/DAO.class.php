@@ -1,15 +1,17 @@
 <?php
 
+$dao = new DAO();
+
 class DAO {
     private $db; // L'objet de la base de donnée
 
     // Ouverture de la base de donnée
     function __construct() {
-        $dsn = 'sqlite:rss.db'; // Data source name
+        $dsn = 'sqlite:../model/rss.db'; // Data source name
         try {
             $this->db = new PDO($dsn);
         } catch (PDOException $e) {
-            exit("Erreur ouverture BD : ".$e->getMessage());
+            exit("Erreur ouverture BD : " . $e->getMessage());
         }
     }
 
@@ -24,7 +26,8 @@ class DAO {
         
         if ($rss == NULL) {
             try {
-                $q = "INSERT INTO RSS (url) VALUES ('$url')";
+                $safeUrl = $this->db->quote($url);
+                $q = "INSERT INTO RSS (url) VALUES ($safeUrl)";
                 $r = $this->db->exec($q);
                 if ($r == 0) {
                     die("createRSS error: no rss inserted\n");
@@ -32,7 +35,7 @@ class DAO {
                 
                 return $this->readRSSfromURL($url);
             } catch (PDOException $e) {
-                die("PDO Error :".$e->getMessage());
+                die("PDO Error :" . $e->getMessage());
             }
         } else {
             // Retourne l'objet existant
@@ -42,8 +45,21 @@ class DAO {
 
     // Acces à un objet RSS à partir de son URL
     function readRSSfromURL($url) {
-        $rss = new RSS($url);
-        $rss->update();
+        $safeUrl = $this->db->quote($url);
+        
+        $query = "SELECT * FROM RSS WHERE url = $safeUrl";
+        
+        try {
+            $result = $this->db->query($query)->fetch();
+            
+            if ($result != NULL) {
+                $rss = new RSS($result['url']);
+                
+                return $rss;
+            }
+        } catch (Exception $ex) {
+            die("PDO Error :" . $ex->getMessage());
+        }
     }
 
     // Met à jour un flux
@@ -51,14 +67,18 @@ class DAO {
         // Met à jour uniquement le titre et la date
         $titre = $this->db->quote($rss->getTitre());
         $q = "UPDATE RSS SET titre = $titre, date='{$rss->getDate()}' WHERE url='{$rss->getUrl()}'";
+        $RSS_id = "SELECT id FROM RSS WHERE url = '{$rss->getUrl()}'";
         try {
             $r = $this->db->exec($q);
+            $RSS_ids = $this->db->query($RSS_id)->fetch();
             if ($r == 0) {
                 die("updateRSS error: no rss updated\n");
             }
         } catch (PDOException $e) {
             die("PDO Error :" . $e->getMessage());
         }
+        
+        return $RSS_ids;
     }
 
     //////////////////////////////////////////////////////////
@@ -67,18 +87,95 @@ class DAO {
 
     // Acces à une nouvelle à partir de son titre et l'ID du flux
     function readNouvellefromTitre($titre, $RSS_id) {
-        //...
+        $safeTitre = $this->db->quote($titre);
+        $safeId = $this->db->quote($RSS_id);
+        
+        $query = "SELECT * FROM Nouvelle WHERE titre = $safeTitre AND RSS_id = $safeId";
+        $result = NULL;
+        
+        try {
+            $result = $this->db->query($query)->fetch();
+        } catch (PDOException $ex) {
+            die("PDO Error :" . $ex->getMessage());
+        }
+        
+        return $result;
+    }
+    
+    // Renvoie toutes les nouvelles d'un flux RSS
+    function getNouvellesFromRSS($url) {
+        $safeUrl = $this->db->quote($url);
+        $query = "SELECT N.titre, N.url, N.date, N.description, N.image FROM Nouvelle N, RSS R WHERE R.url = $safeUrl AND R.id = N.RSS_id";
+        
+        try {
+            $results = $this->db->query($query)->fetchAll(PDO::FETCH_CLASS, "Nouvelle");
+            
+            return $results;
+        } catch (Exception $ex) {
+            die("PDO Error :" . $ex->getMessage());
+        }
     }
 
     // Crée une nouvelle dans la base à partir d'un objet nouvelle
     // et de l'id du flux auquelle elle appartient
     function createNouvelle(Nouvelle $n, $RSS_id) {
-        //...
+        if ($this->readNouvellefromTitre($n->getTitre(), $RSS_id) == NULL) {
+            $safeId = $this->db->quote($RSS_id);
+            $safePubDate = $this->db->quote($n->getDate());
+            $safeTitre = $this->db->quote($n->getTitre());
+            $safeDescription = $this->db->quote($n->getDescription());
+            $safeLink = $this->db->quote($n->getUrl());
+            $safeImage = $this->db->quote($n->getImage());
+
+            $query = "INSERT INTO Nouvelle (date, titre, description, url, image, RSS_id) " .
+                     "VALUES ($safePubDate, $safeTitre, $safeDescription, $safeLink, $safeImage, $safeId)";
+
+            try {
+                $result = $this->db->exec($query);
+                if ($result == 0) {
+                    die ("Error: nouvelle not inserted\n");
+                }
+            } catch (Exception $ex) {
+                die("PDO Error :" . $ex->getMessage());
+            }
+        }
     }
 
     // Met à jour le champ image de la nouvelle dans la base
     function updateImageNouvelle(Nouvelle $n) {
-        // Met à jour uniquement le titre et la date
-        //...
+        $imageUrl = $n->getImage();
+        $RSS_id = $this->getRSSIdFromNouvelle($n);
+        $nouvelleUrl = $this->getIdNouvelle($n);
+        $imageUrlLocal = "images/" . $RSS_id . "_" . $nouvelleUrl . ".jpg";
+        
+        if (!file_exists($imageUrlLocal)) {
+            file_put_contents($imageUrlLocal, file_get_contents($imageUrl));
+        }
+    }
+    
+    function getIdNouvelle(Nouvelle $n) {
+        $safeUrl = $this->db->quote($n->getUrl());
+        $queryRSS_id = "SELECT id FROM Nouvelle WHERE url = $safeUrl";
+        
+        try {
+            $result = $this->db->query($queryRSS_id)->fetch();
+        } catch (Exception $ex) {
+            die("PDO Error :" . $ex->getMessage());
+        }
+        
+        return $result['id'];
+    }
+    
+    function getRSSIdFromNouvelle(Nouvelle $n) {
+        $safeUrl = $this->db->quote($n->getUrl());
+        $queryRSS_id = "SELECT RSS_id FROM Nouvelle WHERE url = $safeUrl";
+        
+        try {
+            $result = $this->db->query($queryRSS_id)->fetch();
+        } catch (Exception $ex) {
+            die("PDO Error :" . $ex->getMessage());
+        }
+        
+        return $result['RSS_id'];
     }
 }
