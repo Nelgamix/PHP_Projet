@@ -26,31 +26,23 @@ class Nouvelle {
     function setImageLocal($imageUrlLocal)     { $this->image = $imageUrlLocal; }
     
     function update(DOMElement $item) {
-        $title =        $item->getElementsByTagName('title');
-        $description =  $item->getElementsByTagName('description');
-        $pubDate =      $item->getElementsByTagName('pubDate');
-        $link =         $item->getElementsByTagName('link');
+        $title =         $item->getElementsByTagName('title');
+        $description =   $item->getElementsByTagName('description');
+        $pubDate =       $item->getElementsByTagName('pubDate');
+        $link =          $item->getElementsByTagName('link');
+        $nodeEnclosure = $item->getElementsByTagName('enclosure');
         
         $this->titre  =       $title->item(0)->textContent;
         $this->description =  $description->item(0)->textContent;
         $this->date =         $pubDate->item(0)->textContent;
         $this->url =          $link->item(0)->textContent;
+        $this->image =        $nodeEnclosure->item(0)->attributes->getNamedItem('url')->nodeValue;
     }
       
-    function downloadImage(DOMElement $item) {
+    /*function downloadImage() {
         global $dao;
         
-        // On suppose que $node est un objet sur le noeud 'enclosure' d'un flux RSS
-        // On tente d'accéder à l'attribut 'url'
-        $nodeEnclosure = $item->getElementsByTagName('enclosure');
-        $node = $nodeEnclosure->item(0)->attributes->getNamedItem('url');
-        
-        if ($node != NULL) {
-            // L'attribut url a été trouvé : on récupère sa valeur, c'est l'URL de l'image
-            $this->image = $node->nodeValue;
-            // On construit un nom local pour cette image : on suppose que $nomLocalImage contient un identifiant unique
-            $dao->updateImageNouvelle($this);
-        }
-    }
+        $dao->updateImageNouvelle($this);
+    }*/
     
 }

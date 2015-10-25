@@ -19,20 +19,31 @@ class RSS {
     function getDate()      { return $this->date; }
     function getNouvelles() { return $this->nouvelles; }
     
-    // Récupère un flux à partir de son URL
+    // Met à jour le flux
     function update() {
         global $dao;
-
+        
+        // On corrige les erreurs de typo dans les RSS (merci les developpeurs de RSS...)
+        $filename = 'xml_files/tmp.xml';
+        $str = implode("", file($this->url));
+        if (!file_exists($filename)) {
+            file_put_contents($filename, $str);
+        }
+        $fp = fopen($filename, 'w');
+        $newStr = str_replace('&', '&amp;', $str);
+        fwrite($fp, $newStr, strlen($newStr));
+        
         // Cree un objet pour accueillir le contenu du RSS : un document XML
         $doc = new DOMDocument;
 
-        //Telecharge le fichier XML dans $rss
-        $doc->load($this->url);
+        // Telecharge le fichier XML
+        $doc->load($filename);
         
-        // Recupère la liste (DOMNodeList) de tous les elements de l'arbre 'title'
+        // Recupère les éléments principaux du flux
         $nodeTitle =    $doc->getElementsByTagName('title');
         $nodePubDate =  $doc->getElementsByTagName('pubDate');
         
+        // On les met à jour
         $this->titre =  $nodeTitle->item(0)->textContent;
         $this->date =   $nodePubDate->item(0)->textContent;
         
@@ -45,9 +56,6 @@ class RSS {
 
             // Met à jour la nouvelle avec l'information téléchargée
             $nouvelle->update($node);
-
-            // Télécharge l'image
-            $nouvelle->downloadImage($node);
             
             $dao->createNouvelle($nouvelle, $id);
         }

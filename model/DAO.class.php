@@ -22,24 +22,17 @@ class DAO {
     // Crée un nouveau flux à partir d'une URL
     // Si le flux existe déjà on ne le crée pas
     function createRSS($url) {
-        $rss = $this->readRSSfromURL($url);
-        
-        if ($rss == NULL) {
-            try {
-                $safeUrl = $this->db->quote($url);
-                $q = "INSERT INTO RSS (url) VALUES ($safeUrl)";
-                $r = $this->db->exec($q);
-                if ($r == 0) {
-                    die("createRSS error: no rss inserted\n");
-                }
-                
-                return $this->readRSSfromURL($url);
-            } catch (PDOException $e) {
-                die("PDO Error :" . $e->getMessage());
+        try {
+            $safeUrl = $this->db->quote($url);
+            $q = "INSERT INTO RSS (url) VALUES ($safeUrl)";
+            $r = $this->db->exec($q);
+            if ($r == 0) {
+                die("createRSS error: no rss inserted\n");
             }
-        } else {
-            // Retourne l'objet existant
-            return $rss;
+
+            return $this->readRSSfromURL($url);
+        } catch (PDOException $e) {
+            die("PDO Error :" . $e->getMessage());
         }
     }
 
@@ -52,14 +45,16 @@ class DAO {
         try {
             $result = $this->db->query($query)->fetch();
             
-            if ($result != NULL) {
+            if ($result != false) {
                 $rss = new RSS($result['url']);
-                
-                return $rss;
+            } else {
+                $rss = $this->createRSS($url);
             }
         } catch (Exception $ex) {
             die("PDO Error :" . $ex->getMessage());
         }
+        
+        return $rss;
     }
 
     // Met à jour un flux
@@ -91,7 +86,6 @@ class DAO {
         $safeId = $this->db->quote($RSS_id);
         
         $query = "SELECT * FROM Nouvelle WHERE titre = $safeTitre AND RSS_id = $safeId";
-        $result = NULL;
         
         try {
             $result = $this->db->query($query)->fetch();
@@ -129,7 +123,7 @@ class DAO {
 
             $query = "INSERT INTO Nouvelle (date, titre, description, url, image, RSS_id) " .
                      "VALUES ($safePubDate, $safeTitre, $safeDescription, $safeLink, $safeImage, $safeId)";
-
+            
             try {
                 $result = $this->db->exec($query);
                 if ($result == 0) {
@@ -139,17 +133,20 @@ class DAO {
                 die("PDO Error :" . $ex->getMessage());
             }
         }
+        
+        $this->updateImageNouvelle($n, $RSS_id);
     }
 
     // Met à jour le champ image de la nouvelle dans la base
-    function updateImageNouvelle(Nouvelle $n) {
+    function updateImageNouvelle(Nouvelle $n, $RSS_id) {
         $imageUrl = $n->getImage();
-        $RSS_id = $this->getRSSIdFromNouvelle($n);
         $nouvelleUrl = $this->getIdNouvelle($n);
         $imageUrlLocal = "images/" . $RSS_id . "_" . $nouvelleUrl . ".jpg";
+        //echo('RSS ID: ' . $RSS_id . ' and URL: ' . $nouvelleUrl . "\n");
         
         if (!file_exists($imageUrlLocal)) {
             file_put_contents($imageUrlLocal, file_get_contents($imageUrl));
+            //echo("Created!\n");
         }
     }
     

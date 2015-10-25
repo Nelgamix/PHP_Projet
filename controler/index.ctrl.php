@@ -1,30 +1,27 @@
 <?php
-    /*
-
-    // Une instance de RSS
-    $rss = new RSS('http://www.lemonde.fr/m-actu/rss_full.xml');
-
-    // Charge le flux depuis le réseau
-    $rss->update();
-
-    include("../view/index.view.php");*/
-    
-    // Test de la classe DAO
     require_once('../model/DAO.class.php');
     require_once('../model/RSS.class.php');
     require_once('../kint/Kint.class.php');
 
-    // Test si l'URL existe dans la BD
-    $url = 'http://www.lemonde.fr/m-actu/rss_full.xml';
+    // Array de rss et d'url
+    $v_rss = array();
+    $v_url = array();
+    
+    // Différents url des rss voulus
+    $v_url[] = 'http://www.lemonde.fr/m-actu/rss_full.xml';
+    $v_url[] = 'http://www.01net.com/rss/actualites/technos/';
 
-    $rss = $dao->readRSSfromURL($url);
-    if ($rss == NULL) {
-        echo $url." n'est pas connu\n";
-        echo "On l'ajoute ... \n";
-        $rss = $dao->createRSS($url);
+    // Récup de tous les RSS
+    foreach($v_url as $url) {
+        $v_rss[] = $dao->readRSSfromURL($url);
     }
 
-    // Mise à jour du flux
-    $rss->update();
+    // Mise à jour de tous les RSS
+    foreach($v_rss as $rss) {
+        $rss->update();
+        //d($rss);
+    }
+    
+    $i = 0;
     
     include("../view/index.view.php");

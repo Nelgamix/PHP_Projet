@@ -67,24 +67,27 @@
         </header>
         
         <div class="contents">
-            <div>
-                <h1>Flux RSS (Le Monde)</h1>
-            </div>
+            <?php foreach($v_rss as $rss) { ?>
+            <div id="<?php echo($i++); ?>">
+                <div>
+                    <h1><?php echo($rss->getTitre()); ?></h1>
+                </div>
 
-            <?php
-                // Affiche le titre et la description de toutes les nouvelles
-                foreach($rss->getNouvelles() as $nouvelle) {
-                    echo('<div class="item">');
-                    print("<img src='../controler/{$nouvelle->getImageLocale()}' alt='Image nouvelle'/>");
-                    print('<div class="description_nouvelle">');
-                    print("<h3>{$nouvelle->getTitre()}</h3>");
-                    print("<span class='peterSpan'>Date</span> : {$nouvelle->getDate()} <br/>");
-                    print("<span class='peterSpan'>Description</span> : {$nouvelle->getDescription()} <br/>");
-                    print("<span class='peterSpan'><a href='{$nouvelle->getUrl()}'>Link vers la news</a></span>  <br/>");
-                    print('</div>');
-                    echo('</div>' . "\n");
-                }
-            ?>
+                <?php
+                    // Affiche le titre et la description de toutes les nouvelles
+                    foreach($rss->getNouvelles() as $nouvelle) {
+                        echo('<div class="item">');
+                        print("<img width='300' height='200' src='../controler/{$nouvelle->getImageLocale()}' alt='Image nouvelle'/>");
+                        print('<div class="description_nouvelle">');
+                        print("<h3>{$nouvelle->getTitre()}</h3>");
+                        print("<span class='peterSpan'>Date</span> : {$nouvelle->getDate()} <br/>");
+                        print("<span class='peterSpan'>Description</span> : {$nouvelle->getDescription()} <br/>");
+                        print("<span class='peterSpan'><a href='{$nouvelle->getUrl()}'>Link vers la news</a></span>  <br/>");
+                        print('</div>');
+                        echo('</div>' . "\n");
+                    }
+                ?>
+            </div> <?php } ?>
         </div>
         
         <footer>
