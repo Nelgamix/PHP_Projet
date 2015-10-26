@@ -24,4 +24,6 @@
     
     $i = 0;
     
+    define('MAX_CHARACTERS_TITRE', 52);
+    
     include("../view/index.view.php");
