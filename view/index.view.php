@@ -113,10 +113,10 @@
     <body>
         <header>
             <div id="titre">
-                <h1>Projet M3105 - Programmation sur serveur web</h1>
+                <h1>Projet M3104 - Programmation sur serveur web</h1>
             </div>
             <div id="logbar">
-                <form action="../controler/login.ctrl.php">
+                <form action="../controller/login.ctrl.php">
                     Nom: <input name="pseudo" type="text" />
                     Mot de passe: <input name="password" type="password" />
                     <input type="submit" name="submit" value="Envoyer" />

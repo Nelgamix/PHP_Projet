@@ -19,7 +19,6 @@
     // Mise à jour de tous les RSS
     foreach($v_rss as $rss) {
         $rss->update();
-        //d($rss);
     }
     
     $i = 0;
