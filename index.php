@@ -1,4 +1,4 @@
 <?php
 
-    header("Location: controller/index.ctrl.php");
+    header("Location: src/controller/index.ctrl.php");
     die();

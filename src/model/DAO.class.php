@@ -76,6 +76,22 @@ class DAO {
         return $RSS_ids;
     }
 
+    function getRSSFromId($id) {
+        $query = "SELECT * FROM RSS WHERE id = $id";
+        try {
+            $r = $this->db->query($query);
+            if ($r != NULL) {
+                $object = $r->fetch();
+                $rss = new RSS($object['url']);
+                $rss->update();
+
+                return $rss;
+            }
+        } catch (PDOException $ex) {
+            die("PDO Error :" . $ex->getMessage());
+        }
+    }
+
     //////////////////////////////////////////////////////////
     // Methodes CRUD sur Nouvelle
     //////////////////////////////////////////////////////////
@@ -174,5 +190,19 @@ class DAO {
         }
         
         return $result['RSS_id'];
+    }
+
+    function getNouvelleFromId($id) {
+        $query = "SELECT * FROM Nouvelle WHERE id = $id";
+        try {
+            $r = $this->db->query($query);
+            if ($r != NULL) {
+                $object = $r->fetchAll(PDO::FETCH_CLASS, 'Nouvelle')[0];
+                d($object);
+                return $object;
+            }
+        } catch (PDOException $ex) {
+            die("PDO Error :" . $ex->getMessage());
+        }
     }
 }

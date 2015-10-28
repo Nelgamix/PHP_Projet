@@ -3,111 +3,7 @@
     <head>
         <title>Flux RSS</title>
         <meta charset="UTF-8" />
-        <link rel="stylesheet" href="../view/style.css" />
-        <style>
-            #logbar {
-                text-align: right;
-                height: 40px;
-                background-color: #93a1a1;
-            }
-            
-            #description {
-                height: 100px;
-                background-color: #2aa198;
-            }
-            
-            #parametres {
-                height: 75px;
-                background-color: #0092db;
-            }
-            
-            body {
-                width: 70%;
-                margin: auto;
-            }
-            
-            form {
-                margin: 6px;
-                padding: 6px;
-            }
-            
-            #contents {
-                padding: 0px 10px;
-                margin-top: -1px;
-                border: 1px solid black;
-                background-color: blanchedalmond;
-            }
-            
-            h1 {
-                text-align: center;
-            }
-            
-            a {
-                color: black;
-                text-decoration: none;
-            }
-            
-            a h2 {
-                margin-top: 10px;
-                margin-bottom: 5px;
-                text-decoration: underline;
-            }
-            
-            h2:hover {
-                color: red;
-            }
-            
-            h2 {
-                color: black;
-            }
-            
-            .rss {
-                margin: 20px 30px;
-                padding: 0 10px;
-                border: 1px solid black;
-                background-color: appworkspace;
-            }
-            
-            .nouvelle {
-                overflow: auto;
-                margin-bottom: 10px;
-                padding-right: 15px;
-                border: 1px solid black;
-                background-color: #657b83;
-                transition: 0.5s;
-            }
-            
-            .nouvelle:hover {
-                background-color: #ccc;
-                box-shadow: 5px 5px 5px white;
-                transition: 0.5s;
-            }
-            
-            .date {
-                font-style: italic;
-                color: #3399ff;
-            }
-            
-            .description {
-                margin-top: 15px; 
-            }
-            
-            img {
-                float: left;
-                margin-right: 20px;
-                clear: both;
-            }
-            
-            img:hover {
-                -moz-box-shadow: 0 0 10px #ff0000;
-                -webkit-box-shadow: 0 0 10px #ccc;
-                box-shadow: 0 0 10px #ff0000;
-            }
-            
-            .description>img {
-                display: none;
-            }
-        </style>
+        <link rel="stylesheet" href="../../resources/css/personnalise.css" />
     </head>
     
     <body>
@@ -178,7 +74,7 @@
 
                     $i++;*/
 
-                    print('<div class="rss">');
+                    /*print('<div class="rss">');
                     print('<a href="' . $rss->getUrl() . '" title="Aller sur le site propriétaire du RSS"'
                             . ' target="_blank"><h1>' . $rss->getTitre() . '</h1></a>');
 
@@ -186,7 +82,7 @@
                         print('<div class="nouvelle">');
 
                         print('<a href="' . $nouvelle->getUrl() . '" title="Lire la suite..." target="_blank">'
-                                . '<img width="400" height="225" src="../controler/'
+                                . '<img width="400" height="225" src="../controller/'
                                 . $nouvelle->getImageLocale() . '" alt="image nouvelle" /></a>');
                         print('<a href="' . $nouvelle->getUrl() . '" title="Lire la suite..." target="_blank"><h2>'
                                 . $nouvelle->getTitre() . '</h2></a>');
@@ -196,7 +92,7 @@
                         print('</div>');
                     }
 
-                    print('</div>');
+                    print('</div>');*/
                 }
             ?>
         </div>
