@@ -1,4 +1,6 @@
 <?php
+require_once('RSS.class.php');
+require_once('Nouvelle.class.php');
 
 $dao = new DAO();
 
@@ -13,6 +15,38 @@ class DAO {
         } catch (PDOException $e) {
             exit("Erreur ouverture BD : " . $e->getMessage());
         }
+    }
+
+    function constructRSS($id) {
+        // 1: construit RSS
+        // 2: construit ses nouvelles
+        // 3: return
+        try {
+            $rss = $this->db->query("SELECT * FROM RSS WHERE id = $id")->fetchAll(PDO::FETCH_CLASS, 'RSS');
+            if (!empty($rss)) {
+                $rss = $rss[0];
+                $rss->setNouvelles($this->getNouvellesFromId($id));
+                return $rss;
+            } else {
+                return null;
+            }
+        } catch (PDOException $ex) {
+            die('PDOException: ' . $ex->getMessage());
+        }
+    }
+
+    function constructAllRSS() {
+        $v_rss = array();
+
+        for ($i = 1;;$i++) {
+            $rss = $this->constructRSS($i);
+            if ($rss == null) {
+                break;
+            }
+            $v_rss[] = $rss;
+        }
+
+        return $v_rss;
     }
 
     //////////////////////////////////////////////////////////
@@ -61,7 +95,7 @@ class DAO {
     function updateRSS(RSS $rss) {
         // Met à jour uniquement le titre et la date
         $titre = $this->db->quote($rss->getTitre());
-        $q = "UPDATE RSS SET titre = $titre, date='{$rss->getDate()}' WHERE url='{$rss->getUrl()}'";
+        $q = "UPDATE RSS SET titre = $titre, date = '{$rss->getDate()}' WHERE url = '{$rss->getUrl()}'";
         $RSS_id = "SELECT id FROM RSS WHERE url = '{$rss->getUrl()}'";
         try {
             $r = $this->db->exec($q);
@@ -88,6 +122,48 @@ class DAO {
         } catch (PDOException $ex) {
             die("PDO Error :" . $ex->getMessage());
         }
+    }
+
+    function cleanRSS($id) {
+        // clean images
+        foreach (glob("../model/images/" . $id . "_*.jpg") as $image) {
+            unlink($image);
+        }
+
+        // clean les nouvelles
+        $query = "DELETE FROM Nouvelle WHERE RSS_id = $id";
+        try {
+            $r = $this->db->exec($query);
+            if ($r < 1) {
+                return false;
+            }
+        } catch (PDOException $ex) {
+            die("PDO Error :" . $ex->getMessage());
+        }
+
+        return true;
+    }
+
+    function cleanAllRSS() {
+        // clean images
+        foreach (glob("../model/images/*.jpg") as $image) {
+            unlink($image);
+        }
+
+        // clean les nouvelles
+        $query = "DELETE FROM Nouvelle";
+        $queryResetID = "DELETE FROM sqlite_sequence WHERE name = 'nouvelle'";
+        try {
+            $r = $this->db->exec($query);
+            $this->db->exec($queryResetID);
+            if ($r < 1) {
+                return false;
+            }
+        } catch (PDOException $ex) {
+            die("PDO Error :" . $ex->getMessage());
+        }
+
+        return true;
     }
 
     //////////////////////////////////////////////////////////
@@ -229,5 +305,48 @@ class DAO {
 
         return $imgsLoc;
     }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // USERS
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    function tryLogin($user, $password) {
+        $user = $this->db->quote($user);
+        $password = $this->db->quote($password);
+
+        $query = "SELECT * FROM utilisateur WHERE login = $user AND mp = $password";
+
+        try {
+            $result = $this->db->query($query)->fetch();
+            if ($result != NULL && !empty($result)) {
+                return true;
+            }
+        } catch (PDOException $ex) {
+            die('PDOException: ' . $ex->getMessage());
+        }
+
+        return false;
+    }
+
+    // Créer un nouvel utilisateur avec le login $user et le mot de passe $password
+    // Return true si l'utilisateur a été crée, false sinon
+    function creerUtilisateur($user, $password) {
+        $user = $this->db->quote($user);
+        $password = $this->db->quote($password);
+
+        $query = "INSERT INTO utilisateur VALUES ($user, $password)";
+
+        try {
+            $result = $this->db->exec($query);
+            if ($result > 0) {
+                return true;
+            }
+        } catch (PDOException $ex) {
+            die('PDOException: ' . $ex->getMessage());
+        }
+
+        return false;
+    }
+
 
 }

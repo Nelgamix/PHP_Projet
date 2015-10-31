@@ -1,11 +1,19 @@
 <?php
+session_start();
 
 require_once('../model/DAO.class.php');
 require_once('../model/RSS.class.php');
 require_once('../../kint/Kint.class.php');
 
+$titrePrincipal = "Projet M3104 - Programmation sur serveur web";
+
+if (isset($_GET['search']) && $_GET['search'] != "") {
+    $search = $_GET['search'];
+    $_GET['mode'] = 2;
+}
+
 // Array de rss et d'url
-$v_rss = array();
+/*$v_rss = array();
 $v_url = array();
 
 // Différents url des rss voulus
@@ -20,7 +28,8 @@ foreach($v_url as $url) {
 // Mise à jour de tous les RSS
 foreach($v_rss as $rss) {
     $rss->update();
-}
+}*/
+$v_rss = array();
 
 if (isset($_GET['mode'])) {
     $mode = $_GET['mode'];
@@ -43,6 +52,8 @@ switch($mode) {
         $includeFile .= 'afficher_nouvelles.ctrl.php';
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
+        } else if (isset($search)) {
+            $id = 0;
         } else {
             $id = 1;
         }

@@ -17,6 +17,20 @@ body {
     padding-left: 33px;
     padding-bottom: 33px;
 }
+#images_display {
+    width: 1260px;
+    margin: auto;
+}
+
+#images_display>a>img {
+    margin: 10px;
+    width: 400px;
+    height: 250px;
+}
+
+#images_display>a>img:hover {
+    box-shadow: red 5px 5px 5px;
+}
 
 #nouvelles_display {
     width: 80%;
@@ -44,4 +58,8 @@ body {
 
 #textcontent>.panel-body>img {
     display: none;
+}
+
+#backoffice li {
+    margin-bottom: 5px;
 }

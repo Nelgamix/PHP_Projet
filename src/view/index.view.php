@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,25 +25,24 @@
                     <div id="navbar" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#parameters">Paramètres</a></li>
+                            <li><a href="parametres.ctrl.php">Paramètres</a></li>
                             <li><a href="#about">A propos</a></li>
+                        </ul>
+                        <ul class="nav navbar-right">
+                            <form class="navbar-form navbar-left" role="search" action="index.ctrl.php" method="GET">
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-sm" placeholder="Le Monde, ..." name="search">
+                                </div>
+                                <button type="submit" class="btn btn-sm btn-default">Rechercher</button>
+                            </form>
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
             </nav>
 
             <div id="titre">
-                <h1>Projet M3104 - Programmation sur serveur web</h1>
+                <h1><?= $titrePrincipal ?></h1>
             </div>
-
-            <!--<div id="logbar" class="alert">
-                <form action="../controller/login.ctrl.php">
-                    Login&nbsp;&nbsp;&nbsp;&nbsp;
-                    Nom: <input name="pseudo" type="text" />
-                    Mot de passe: <input name="password" type="password" />
-                    <input type="submit" name="submit" value="Envoyer" />
-                </form>
-            </div>-->
             <?php
                 if ($mode == 4):
             ?>
@@ -128,7 +127,7 @@
         </div>
         
         <footer>
-            
+            <div>(DEBUG: <a href="backoffice.ctrl.php" title="accès au backoffice">backoffice</a>)</div>
         </footer>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

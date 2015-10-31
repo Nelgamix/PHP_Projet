@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/controller/backoffice.ctrl.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/controller/parametres.ctrl.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/view/afficher_flux.view.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/view/afficher_nouvelle.view.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/view/afficher_nouvelles.view.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/view/backoffice.view.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/view/parametres.view.php" charset="UTF-8" />
   </component>
 </project>

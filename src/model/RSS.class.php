@@ -8,10 +8,13 @@ class RSS {
     private $date;  // Date du dernier téléchargement du flux
     private $nouvelles; // Liste des nouvelles du flux
 
-    // Contructeur
-    function __construct($url) {
-        $this->url = $url;
+    // Contructeur TOCHANGE
+    function __construct($url = "") {
+        if ($url != "") $this->url = $url;
     }
+
+    function setNouvelles($nouvelles) { $this->nouvelles = $nouvelles; }
+    function setDate($date) { $this->date = $date; }
 
     // Fonctions getter
     function getTitre()     { return $this->titre; }
@@ -19,6 +22,8 @@ class RSS {
     function getDate()      { return $this->date; }
     function getNouvelles() { return $this->nouvelles; }
     function getId()        { return $this->id; }
+
+    function deleteNouvelle($k) { unset($this->nouvelles[$k]); }
     
     // Met à jour le flux
     function update() {
