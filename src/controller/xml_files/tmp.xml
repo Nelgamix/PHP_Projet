@@ -1,176 +1,400 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Actu : Toute l'actualité sur Le Monde.fr.</title>
-    <description>Actu - Découvrez gratuitement tous les articles, les vidéos et les infographies de la rubrique Actu sur Le Monde.fr.</description>
-    <copyright>Copyright Le Monde.fr</copyright>
-    <link>http://www.lemonde.fr/m-actu/rss_full.xml</link>
-    <atom:link href="http://www.lemonde.fr/m-actu/rss_full.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Oct 2015 15:16:14 +0100</pubDate>
-    <image>
-      <url>http://www.lemonde.fr/medias/web/img/export/logo_lmfr_90x20_export.png</url>
-      <title>Actu : Toute l'actualité sur Le Monde.fr.</title>
-      <link>http://www.lemonde.fr/m-actu/rss_full.xml</link>
-    </image>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" version="2.0">
+    <channel>
+        <atom:link href="http://www.01net.com/actualites/technos/" rel="self" type="application/rss+xml" />
+        <title>Technos - 01net</title>
+        <link>http://www.01net.com/actualites/technos/</link>
+        <description>L'actualité des nouvelles technologies sur 01net : internet, jeu vidéo, musique, produits high tech</description>
+        <language>fr</language>
+        <copyright>Copyright 01NET</copyright>
+        <pubDate>Sat, 31 Oct 2015 02:30:07 +0100</pubDate>
+        <lastBuildDate>Sat, 31 Oct 2015 02:30:07 +0100</lastBuildDate>
+        <ttl>15</ttl>
+        <image>
+            <title>Technos - 01net</title>
+            <url>http://img.bfmtv.com/ressources/img/logo/logo-01net-gris.png</url>
+            <link>http://www.01net.com/actualites/technos/</link>
+        </image>    <item>
+    <title>RankBrain : comment Google booste son moteur de recherche à coup d'intelligence artificielle
+                    </title>
+            <description>Le géant du web a développé un algorithme qui permet à ses serveurs de deviner le sens des requêtes des internautes. Basée sur l’apprentissage automatique, cette technique semble très bien fonctionner. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/3c0/cc8ba8bdb25d0f4e7e842f44edcec.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/google-booste-son-moteur-de-recherche-a-coup-d-intelligence-artificielle-925546.html</link>
+    <pubDate>Wed, 28 Oct 2015 03:09:58 +0100</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/google-booste-son-moteur-de-recherche-a-coup-d-intelligence-artificielle-925546.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/3c0/cc8ba8bdb25d0f4e7e842f44edcec.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/m-moyen-format/article/2015/10/23/l-equipe-de-foot-belge-championne-a-la-reguliere_4795867_4497271.html</link>
-      <title>L’équipe de foot belge, championne à la régulière</title>
-      <description>La FIFA l’a sacrée meilleure du monde. Une place, obtenue grâce à sa régularité, qui laisse perplexe jusqu’aux Belges eux-mêmes.</description>
-      <pubDate>Fri, 23 Oct 2015 16:50:19 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4795867/</guid>
-      <enclosure url="http://s1.lemde.fr/image/2015/10/23/644x322/4795863_3_f43f_en-remportant-la-victoire-contre-israel-le-13_f2b736050131ae8cbfd104cb8e85ad50.jpg" type="image/jpeg" length="64061"/>
-    </item>
+    <title>
+                            Quelques 20 000 nouveautés seraient dévoilées au prochain CES de Las Vegas !</title>
+            <description>L'édition 2016 du Consumer electronic show devrait encore être une année record pour les annonces de produits. Avec des lancements aussi du côté des entreprises françaises. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/178/338e24d5a69f67b2aba348316acbe.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/quelles-sont-les-principales-nouveautes-attendues-au-ces-2016-924763.html</link>
+    <pubDate>Fri, 23 Oct 2015 08:42:41 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/quelles-sont-les-principales-nouveautes-attendues-au-ces-2016-924763.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/178/338e24d5a69f67b2aba348316acbe.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/m-actu/article/2015/10/23/la-fin-des-programmes-tele-dans-les-taxis-new-yorkais_4795280_4497186.html</link>
-      <title>La fin des programmes télé dans les taxis new-yorkais</title>
-      <description>Depuis 2007, clients et chauffeurs des “yellow cabs” devaient supporter, durant leur trajet, des programmes de divertissement diffusés en boucles et entrecoupés de nombreuses publicités. Face au tollé, ils vont enfin disparaître.</description>
-      <pubDate>Fri, 23 Oct 2015 06:39:45 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4795280/</guid>
-      <enclosure url="http://s2.lemde.fr/image/2015/10/23/644x322/4795278_3_db2d_dans-un-taxi-de-new-york-en-octobre-2013_7c191f3405d7d27b7b6fb0b3c828d364.jpg" type="image/jpeg" length="61174"/>
-    </item>
+    <title>Vingt-deux start-up représenteront la France au CES 2016 de Las Vegas</title>
+            <description>Les jeunes pousses ont été sélectionnées par Business France pour participer en janvier prochain à la grand-messe de l’électronique mondiale. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/a20/c3ca278b5973735f27ac4b6c1f38d.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/vingt-deux-start-up-representeront-la-france-au-ces-2016-de-las-vegas-924750.html</link>
+    <pubDate>Fri, 23 Oct 2015 08:07:36 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/vingt-deux-start-up-representeront-la-france-au-ces-2016-de-las-vegas-924750.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/a20/c3ca278b5973735f27ac4b6c1f38d.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/m-gens-portrait/article/2015/10/22/pewdiepie-le-youtubeur-aux-40-millions-de-fans_4794637_4497229.html</link>
-      <title>PewDiePie, le YouTubeur aux 40 millions de fans</title>
-      <description>A 25 ans, ce testeur de jeux vidéo est suivi sur sa chaîne par 40 millions d’abonnés. En 2014, il a généré à lui seul plus de 10 millions d’euros de recettes. Au point d’occuper la tête du classement “Forbes” des “stars YouTube les mieux payées”.</description>
-      <pubDate>Thu, 22 Oct 2015 10:36:24 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4794637/</guid>
-      <enclosure url="http://s1.lemde.fr/image/2015/10/22/644x322/4794614_3_4f07_il-y-a-encore-quelques-annees-felix-arvid-ulf_90b7510a2af6e0c00c4362e15ad7b61f.jpg" type="image/jpeg" length="24247"/>
-    </item>
+    <title>                        Pourquoi la French Tech est de plus en plus présente au CES de Las Vegas</title>
+            <description>Plus de 130 entreprises françaises devraient être présentes lors de la prochaine édition du Consumer electronic show. Une reconnaissance de l’innovation et de la créativité hexagonales. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/05b/b7f406a98c653164f91ca9d75538b.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/pourquoi-la-french-tech-est-de-plus-en-plus-presente-au-ces-924759.html</link>
+    <pubDate>Fri, 23 Oct 2015 08:22:55 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/pourquoi-la-french-tech-est-de-plus-en-plus-presente-au-ces-924759.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/05b/b7f406a98c653164f91ca9d75538b.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/m-moyen-format/article/2015/10/22/anthea-bell-la-traductrix-d-asterix_4794304_4497271.html</link>
-      <title>Anthea Bell, la « traductrix » d’Astérix</title>
-      <description>A 79 ans, cette Britannique vient de finir de traduire « Le Papyrus de César », sa 36e adaptation en anglais des aventures du Gaulois. Un exploit, tant la BD fourmille de jeux de mots.</description>
-      <pubDate>Thu, 22 Oct 2015 06:44:43 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4794304/</guid>
-      <enclosure url="http://s2.lemde.fr/image/2015/10/22/644x322/4794302_3_8a0f_parade-d-asterix-et-obelix-a-londres-le-16-se_82d98fee32ea63e5e4cb786edd95fb63.jpg" type="image/jpeg" length="77570"/>
-    </item>
+    <title>                        Pourquoi le CES est devenu un événement incontournable au-delà de la planète high-tech</title>
+            <description>Depuis près de 50 ans, ce salon américain se veut le miroir de l’innovation technologique. Et chaque année, l'événement prend une nouvelle ampleur. L’édition 2016 devrait attirer plus de 165 000 visiteurs. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/51c/9c8dc9f35e5148ca68baead65632c.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/pourquoi-le-ces-est-devenu-incontournable-924174.html</link>
+    <pubDate>Wed, 21 Oct 2015 09:42:48 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/pourquoi-le-ces-est-devenu-incontournable-924174.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/51c/9c8dc9f35e5148ca68baead65632c.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://bigbrowser.blog.lemonde.fr/2015/10/19/un-temple-mexicain-englouti-reapparait/</link>
-      <title>Une église mexicaine engloutie réapparaît</title>
-      <description>Le niveau du réservoir Nezahualcoyotl a baissé de 25 mètres, laissant apparaître un édifice colonial datant du XVIe siècle.</description>
-      <pubDate>Mon, 19 Oct 2015 18:38:28 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4792643/</guid>
-      <enclosure url="http://s1.lemde.fr/image/2015/10/19/644x322/4792644_3_629b_ap-david-von-blohn_f0f648f8502fa56904ceb84d55659701.jpg" type="image/jpeg" length="33918"/>
-    </item>
+    <title>Magic Leap lève un coin du voile sur son système de réalité augmentée</title>
+            <description>Le projet de la startup américaine met en œuvre un véritable ordinateur miniature avec son propre système d’exploitation. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/e96/4833827bb5d73fd27647c31859285.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/magic-leap-leve-un-coin-du-voile-sur-son-systeme-de-realite-augmentee-923983.html</link>
+    <pubDate>Wed, 21 Oct 2015 08:30:57 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/magic-leap-leve-un-coin-du-voile-sur-son-systeme-de-realite-augmentee-923983.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/e96/4833827bb5d73fd27647c31859285.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/m-actu/article/2015/10/16/laurent-baffie-et-jacques-perry-salkow-la-guerre-des-lettres_4791188_4497186.html</link>
-      <title>Laurent Baffie et Jacques Perry-Salkow : la guerre des lettres</title>
-      <description>L’humouriste vient de publier le “Dictionnaire des noms propres (ou presque !)”. Dans ce recueil d’anagrammes, l’auteur Jacques Perry-Salkow assure avoir retrouvé une quarantaine de ses propres trouvailles. Hasard ou plagiat ?</description>
-      <pubDate>Fri, 16 Oct 2015 16:53:13 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4791188/</guid>
-      <enclosure url="http://s2.lemde.fr/image/2015/10/16/644x322/4791185_3_4412_laurent-baffie-a-gauche-et-jacques_b836d1e1e05fe514fa42566b400e4af6.jpg" type="image/jpeg" length="29557"/>
-    </item>
+    <title>Le CES Unveiled, c'est quoi ?</title>
+            <description>C'est comme un grand jour de répétition pour les start-up françaises de la high-tech, avant le départ pour le CES de Las Vegas. Celles qui seront du voyage se retrouvent à Paris, ce 21 octobre, pour échanger sur les dernières innovations made in France. Notre chaîne 01netTV est sur place ! <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/91e/54fc83f5bd7145e012d6d4bf77e4c.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/le-ces-unveiled-c-est-quoi-923946.html</link>
+    <pubDate>Wed, 21 Oct 2015 12:37:25 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/le-ces-unveiled-c-est-quoi-923946.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/91e/54fc83f5bd7145e012d6d4bf77e4c.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/m-actu/article/2015/10/16/chine-le-mystere-du-brin-d-herbe-sur-la-tete_4791184_4497186.html</link>
-      <title>Chine : le mystère du brin d’herbe sur la tête</title>
-      <description>Se promener avec une jeune pousse ou une fleur trônant sur le sommet de son crâne est devenu très tendance en Chine. Les médias et les réseaux sociaux sont divisés sur le sens exact de ce phénomène.</description>
-      <pubDate>Fri, 16 Oct 2015 16:48:54 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4791184/</guid>
-      <enclosure url="http://s1.lemde.fr/image/2015/10/16/644x322/4791180_3_585a_pousse-de-haricot-mais-aussi-fleur-banane_864a46ecb2cfec32451915af2b476c05.jpg" type="image/jpeg" length="21280"/>
-    </item>
+    <title>
+                        Et si une simple caméra à bord d’une voiture suffisait pour la rendre autonome
+                    </title>
+            <description>La technologie Valeo Cruise 4 U relève un challenge de taille puisque cette technologie permet au véhicule équipé d’une simple caméra et d’un Lidar de rouler seul sur autoroute. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/c7a/eed34ef949f7a34ae0390c9675bdb.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/et-une-simple-camera-a-bord-d-une-voiture-suffisait-pour-la-conduite-autonome-922631.html</link>
+    <pubDate>Sat, 17 Oct 2015 10:32:20 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/et-une-simple-camera-a-bord-d-une-voiture-suffisait-pour-la-conduite-autonome-922631.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/c7a/eed34ef949f7a34ae0390c9675bdb.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/m-actu/article/2015/10/16/aux-etats-unis-le-sport-deforme-la-jeunesse_4791176_4497186.html</link>
-      <title>La performance au détriment du plaisir : les jeunes Américains délaissent le sport</title>
-      <description>La pratique sportive des jeunes ­Américains est en chute libre. En cause, la course à l’excellence dans l’espoir de décrocher une bourse universitaire. Au détriment du plaisir.</description>
-      <pubDate>Fri, 16 Oct 2015 16:33:45 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4791176/</guid>
-      <enclosure url="http://s2.lemde.fr/image/2015/10/16/644x322/4791175_3_c7bf_le-football-americain-n-est-plus-en-odeur-de_73907d1af49e0b4bc5a835f19e705165.jpg" type="image/jpeg" length="97121"/>
-    </item>
+    <title>
+                        Tesla Model S : elle conduit désormais (presque) toute seule </title>
+            <description>La mise à jour 7.0 de la Tesla Model S est déployée dès maintenant aux Etats-Unis et arrive la semaine prochaine en Europe. Celle-ci entérine les fonctions du pack Autopilot. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/b76/cb8be79356de1062f55c412e5b9cb.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/tesla-model-s-elle-conduit-desormais-presque-toute-seule-921680.html</link>
+    <pubDate>Fri, 16 Oct 2015 10:49:40 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/tesla-model-s-elle-conduit-desormais-presque-toute-seule-921680.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/b76/cb8be79356de1062f55c412e5b9cb.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/m-actu/article/2015/10/16/un-americain-veut-chasser-renoir-des-musees_4791157_4497186.html</link>
-      <title>Un Américain veut chasser Renoir des musées</title>
-      <description>Au nom de l’esthétique, Max Geller milite pour le retrait des œuvres du peintre impressionniste des salles d’exposition. Une lutte déroutante menée notamment sur Instagram.</description>
-      <pubDate>Fri, 16 Oct 2015 16:22:48 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4791157/</guid>
-      <enclosure url="http://s1.lemde.fr/image/2015/10/16/644x322/4791154_3_ec6f_manifestation-anti-renoir-devant-le-musee-des_ca15b5bbbbe3461f484e990c8bf0f809.jpg" type="image/jpeg" length="95939"/>
-    </item>
+    <title>
+                        Demain, les images Jpeg pourraient être protégées contre la copie
+                    </title>
+            <description>Le comité qui a apporté le format jpeg au monde contemple l’idée de l’assujettir à des DRM. Ces verrous numériques serviraient à protéger la vie privée des utilisateurs et la propriété intellectuelle des ayant-droits… Tout en restreignant énormément l’utilisation de ces photos. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/e05/835595c9ad9215a451cbea1df457f.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/demain-les-images-jpeg-pourraient-etre-verrouilles-numeriquement-pour-votre-bien-922679.html</link>
+    <pubDate>Thu, 15 Oct 2015 07:57:38 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/demain-les-images-jpeg-pourraient-etre-verrouilles-numeriquement-pour-votre-bien-922679.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/e05/835595c9ad9215a451cbea1df457f.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/m-actu/article/2015/10/16/notre-pape-francois-un-magazine-pas-tres-catholique_4791127_4497186.html</link>
-      <title>“Notre pape François”, un magazine pas très catholique</title>
-      <description>Ce bimestriel people, qui surfe sur la popularité du Saint-Père, compte dans ses rangs Frigide Barjot, l’ex-égérie de La Manif pour tous, et un éditeur de presse plus connu pour ses revues X que pour sa dévotion…</description>
-      <pubDate>Fri, 16 Oct 2015 16:06:38 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4791127/</guid>
-      <enclosure url="http://s2.lemde.fr/image/2015/10/16/644x322/4791125_3_56b9_2015-10-14-86b5ee3-15020-zsaadw_8faa0a1a4030b740307201d8f1fd245f.jpg" type="image/jpeg" length="50389"/>
-    </item>
+    <title>
+                        Samsung pourrait intégrer une technologie similaire au 3D Touch d'Apple au Galaxy S7
+                    </title>
+            <description>Le prochain smartphone haut de gamme de Samsung pourrait intégrer une technologie proche du 3D Touch d'Apple développée par Synaptics. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/d6f/2e7d2a0a327c74f212b5f22b1ca98.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/samsung-pourrait-integrer-une-technologie-3d-touch-like-au-galaxy-s7-922375.html</link>
+    <pubDate>Wed, 14 Oct 2015 07:58:27 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/samsung-pourrait-integrer-une-technologie-3d-touch-like-au-galaxy-s7-922375.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/d6f/2e7d2a0a327c74f212b5f22b1ca98.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/m-actu/article/2015/10/16/sir-ridley-scott-createur-d-univers_4791057_4497186.html</link>
-      <title>Sir Ridley Scott, créateur d’univers</title>
-      <description>Le réalisateur, maître d’œuvre de reconstitutions plus vraies que nature, poursuit sur sa lancée avec « Seul sur mars », en salles ce mercredi.</description>
-      <pubDate>Fri, 16 Oct 2015 14:13:06 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4791057/</guid>
-      <enclosure url="http://s1.lemde.fr/image/2015/10/16/644x322/4791054_3_8766_les-montagnes-martiennes-reconstituees-sans_2b5fba2ff881e191603ce9884fdda38b.jpg" type="image/jpeg" length="43410"/>
-    </item>
+    <title>SanDisk et HP s’associent pour créer une mémoire 1000 fois plus rapide</title>
+            <description>Le nouveau type de mémoire devrait remplacer la mémoire flash dans les SSD, mais aussi la mémoire vive DRAM des ordinateurs. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/dd6/0911412200c77266061a00e8e8e6c.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/sandisk-et-hp-s-associent-pour-creer-une-memoire-1000-fois-plus-rapide-921765.html</link>
+    <pubDate>Tue, 13 Oct 2015 04:50:51 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/sandisk-et-hp-s-associent-pour-creer-une-memoire-1000-fois-plus-rapide-921765.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/dd6/0911412200c77266061a00e8e8e6c.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/m-actu/visuel/2015/10/15/dans-les-archives-magnum-jeux-de-jambes_4790342_4497186.html</link>
-      <title>Dans les archives Magnum : Jeux de jambes</title>
-      <description>Chaque semaine, « M Le magazine du Monde » publie une image emblématique tirée des archives de l’agence Magnum Photos.</description>
-      <pubDate>Thu, 15 Oct 2015 14:55:33 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4790342/</guid>
-      <enclosure url="http://s2.lemde.fr/image/2015/10/08/644x322/4785237_3_c7e2_raymond-depardon-magnum-photos_211e9a612072f9d068e9395a8b6114c9.jpg" type="image/jpeg" length="63052"/>
-    </item>
+    <title>Google simplifie le web mobile pour le rendre plus rapide</title>
+            <description>Le géant du web propose aux éditeurs de presse un HTML version allégée où le Javascript est largement banni. La promesse : un gain de performance de 15 à 85 % au niveau du téléchargement. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/a9d/cf009308d58d95f66b7b7b77c76ed.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/google-simplifie-le-web-mobile-pour-le-rendre-plus-rapide-920933.html</link>
+    <pubDate>Thu, 08 Oct 2015 07:27:47 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/google-simplifie-le-web-mobile-pour-le-rendre-plus-rapide-920933.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/a9d/cf009308d58d95f66b7b7b77c76ed.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/m-actu/visuel/2015/10/15/dans-les-archives-magnum-rayonnement_4788522_4497186.html</link>
-      <title>Dans les archives Magnum : Rayonnement</title>
-      <description>Chaque semaine, « M Le magazine du Monde » publie une image emblématique tirée des archives de l’agence Magnum Photos.</description>
-      <pubDate>Thu, 15 Oct 2015 13:36:44 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4788522/</guid>
-      <enclosure url="http://s1.lemde.fr/image/2015/10/15/644x322/4790298_3_7a40_ill-4790298-86d5-img01_db232d65500383ae91db4cd34da83399.jpg" type="image/jpeg" length="39027"/>
-    </item>
+    <title>
+                        Microsoft veut augmenter l’autonomie de nos appareils en combinant plusieurs batteries
+                    </title>
+            <description>Des chercheurs du géant de Redmond ont mis au point un système qui associe une solution logicielle et différents types de batteries dans un appareil pour optimiser performances et autonomie… <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/33f/8cd33c10d5846865ad8c119999cdc.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/microsoft-veut-augmenter-l-autonomie-de-nos-appareils-en-combinant-differentes-batteries-920692.html</link>
+    <pubDate>Thu, 08 Oct 2015 09:51:01 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/microsoft-veut-augmenter-l-autonomie-de-nos-appareils-en-combinant-differentes-batteries-920692.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/33f/8cd33c10d5846865ad8c119999cdc.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/m-actu/article/2015/10/15/a-l-assemblee-les-ecologistes-n-en-finissent-plus-de-se-diviser_4789792_4497186.html</link>
-      <title>A l’Assemblée, les écologistes n’en finissent plus de se diviser</title>
-      <description>Entre pro et anti-gouvernement, les élus écologistes au Palais Bourbon se déchirent. Pas sûr que l’arrivée de Cécile Duflot à la coprésidence du groupe sonne la fin de la récré…</description>
-      <pubDate>Thu, 15 Oct 2015 10:07:20 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4789792/</guid>
-      <enclosure url="http://s2.lemde.fr/image/2015/10/15/644x322/4789791_3_2ca0_barbara-pompili-et-francois-de-rugy-actuelle_598e7c07f9d7f4d670c21f675f2f173b.jpg" type="image/jpeg" length="65492"/>
-    </item>
+    <title>On a testé la meilleure voiture autonome française</title>
+            <description>Le véhicule autonome de Vedecom nous a épaté. Nous avons parcouru 7 km à son bord, au milieu de la circulation de Bordeaux, sans aucune intervention du conducteur. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/d0d/9274cd1ca56512cd1274a34fdcd88.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/on-a-teste-la-meilleure-voiture-autonome-francaise-920569.html</link>
+    <pubDate>Wed, 07 Oct 2015 09:58:24 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/on-a-teste-la-meilleure-voiture-autonome-francaise-920569.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/d0d/9274cd1ca56512cd1274a34fdcd88.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/m-actu/article/2015/10/14/jack-dorsey-chez-twitter-un-retour-parmi-d-autres_4789474_4497186.html</link>
-      <title>Jack Dorsey chez Twitter : un retour parmi d’autres</title>
-      <description>Le 5 octobre, le businessman a repris les rênes de Twitter, dont il avait été évincé en 2008. Avant lui, d’autres génies de la technologie ont quitté, contraints ou non, l’empire qu’ils avaient créé. Jusqu’à ce qu’on leur demande de revenir.</description>
-      <pubDate>Wed, 14 Oct 2015 18:05:03 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4789474/</guid>
-      <enclosure url="http://s1.lemde.fr/image/2015/10/14/644x322/4789471_3_c7a8_jack-dorsey-fondateur-et-nouveau-pdg-de_6a70b59cb9c9726780df47d1fb5c2735.jpg" type="image/jpeg" length="27502"/>
-    </item>
+    <title>
+                        IBM vient peut-être de sauver la Loi de Moore en révolutionnant les nanotubes de carbone
+                    </title>
+            <description>Des chercheurs de Big Blue ont réussi à résoudre un des trois problèmes qui empêchent l’adoption de ce matériau « miracle » pour fabriquer des puces qui prendront place dans nos futurs appareils électroniques. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/2c4/b0240e6697a79f6b733b9257d28c6.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/ibm-vient-peut-etre-de-sauver-la-loi-de-moore-en-revolutionnant-les-nanotubes-de-carbone-919475.html</link>
+    <pubDate>Fri, 02 Oct 2015 09:55:26 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/ibm-vient-peut-etre-de-sauver-la-loi-de-moore-en-revolutionnant-les-nanotubes-de-carbone-919475.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/2c4/b0240e6697a79f6b733b9257d28c6.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/m-moyen-format/article/2015/10/14/au-japon-le-nazisme-s-affiche-toujours-librement_4789027_4497271.html</link>
-      <title>Au Japon, le nazisme s’affiche toujours librement</title>
-      <description>Les références au nazisme ne sont pas interdites par Tokyo. Pour sanctionner un homme ayant dessiné une moustache hitlérienne sur un portrait du premier ministre, la justice a trouvé d’autres arguments.</description>
-      <pubDate>Wed, 14 Oct 2015 10:21:48 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4789027/</guid>
-      <enclosure url="http://s2.lemde.fr/image/2015/10/14/644x322/4789026_3_dae5_le-18-septembre-40-000-personnes-ont-ma_7e3d945a2ddcffe655abbe26248505cb.jpg" type="image/jpeg" length="65882"/>
-    </item>
+    <title>
+                        Audi A4, BMW Série 7 et Renault Mégane 4 : les meilleures voitures connectées 2015
+                    </title>
+            <description>Les trois nouveaux modèles d'Audi, de BMW et de Renault, présentés à l'IAA de Francfort, sont élus les Voitures connectées de 2015… un prix décerné, chaque année, par 01net.com. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/c39/f2dd55f11b3ec444e9c1b369c839c.png"/>]]></description>
+        <link>http://www.01net.com/actualites/audi-a4-bmw-serie-7-et-renault-megane-4-les-meilleures-voitures-connectees-2015-919129.html</link>
+    <pubDate>Fri, 02 Oct 2015 09:55:27 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/audi-a4-bmw-serie-7-et-renault-megane-4-les-meilleures-voitures-connectees-2015-919129.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/c39/f2dd55f11b3ec444e9c1b369c839c.png"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/m-actu/article/2015/10/13/patrick-timsit-le-premier-danger-c-est-celui-de-ne-pas-etre-drole_4785013_4497186.html</link>
-      <title>Patrick Timsit : “Le premier danger, c'est celui de ne pas être drôle”</title>
-      <description>La première de son nouveau spectacle, “On ne peut pas rire de tout”, a eu lieu au lendemain des attentats contre “Charlie”. Sa reprise à la Gaîté-Montparnasse est l'occasion d'évoquer avec le comédien les limites du rire.</description>
-      <pubDate>Tue, 13 Oct 2015 10:22:09 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4785013/</guid>
-      <enclosure url="http://s1.lemde.fr/image/2015/10/08/644x322/4785012_3_3b0a_patrick-timsit_5d16bdec054fab8241be61901e332f1b.jpg" type="image/jpeg" length="23808"/>
-    </item>
+    <title>Quelles seront les technologies de la voiture de demain ? </title>
+            <description>Scala, Mobius, Sightstream, 360 vue 3D, le nom de ces technologies Valeo ne vous évoquent peut-être pas grand-chose et pourtant elles sont aujourd’hui au cœur des développements de la voiture du futur. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/564/f8c8339afc879d4c91fe1f1ef87d8.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/valeo-un-equipementier-francais-a-la-pointe-sur-la-voiture-autonome-917383.html</link>
+    <pubDate>Mon, 28 Sep 2015 12:41:45 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/valeo-un-equipementier-francais-a-la-pointe-sur-la-voiture-autonome-917383.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/564/f8c8339afc879d4c91fe1f1ef87d8.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/m-moyen-format/article/2015/10/12/scenario-macabre-dans-les-mines-chinoises_4787997_4497271.html</link>
-      <title>Scénario macabre dans les mines chinoises</title>
-      <description>Des criminels qui assassinent des mineurs de fond pour toucher de l’argent, c’est le scénario du film « Blind shaft », sorti en 2003. C’est aussi celui qu’avaient élaboré trois hommes qui viennent d’être condamnés à la peine capitale.</description>
-      <pubDate>Mon, 12 Oct 2015 17:49:56 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4787997/</guid>
-      <enclosure url="http://s2.lemde.fr/image/2015/10/12/644x322/4787994_3_4a5e_dans-la-province-chinoise-du-ningxia-trois_a1a7f89bec49358a0e82d308037ee217.jpg" type="image/jpeg" length="20089"/>
-    </item>
+    <title>
+                        Avec Brotli, Google veut encore plus compresser le Web
+                    </title>
+            <description>Le géant du web présente un algorithme qui serait nettement plus performant pour compresser les données. Les applications sont nombreuses, dans le stockage comme dans le web. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/224/e3d3afef8de2ac662e8c7f64be4c4.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/avec-brotli-google-veut-encore-plus-compresser-le-web-917007.html</link>
+    <pubDate>Thu, 24 Sep 2015 10:48:14 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/avec-brotli-google-veut-encore-plus-compresser-le-web-917007.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/224/e3d3afef8de2ac662e8c7f64be4c4.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/football/article/2015/10/10/fifa-platini-fait-appel-et-recoit-le-soutien-de-la-confederation-sud-americaine_4787049_1616938.html</link>
-      <title>FIFA : Platini fait appel et reçoit le soutien de la confédération sud-américaine</title>
-      <description>Le président de l’UEFA a officiellement interjeté appel de sa suspension par la FIFA, samedi.</description>
-      <pubDate>Sat, 10 Oct 2015 16:33:27 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4787049/</guid>
-      <enclosure url="http://s1.lemde.fr/image/2015/10/10/644x322/4787048_3_fe79_michel-platini-en-septembre-2008_3783e8a5961ca6111aae0ff18d1fd55b.jpg" type="image/jpeg" length="20026"/>
-    </item>
+    <title>Apple peut-il vraiment construire sa voiture autonome d’ici 2019 ?
+                    </title>
+            <description>Simple mythe ou réalité prochaine, Apple pourrait bien commercialiser sa voiture électrique - et autonome ? - d’ici trois ans. Si le sujet est régulièrement mis sur le tapis, rien ne semble s’opposer à ce que le géant américain puisse mener son projet à terme… sous certaines conditions. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/521/ded7e2375d42d93341806acacfeef.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/apple-peut-il-vraiment-construire-sa-voiture-autonome-d-ici-2019-916822.html</link>
+    <pubDate>Wed, 23 Sep 2015 07:24:28 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/apple-peut-il-vraiment-construire-sa-voiture-autonome-d-ici-2019-916822.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/521/ded7e2375d42d93341806acacfeef.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
     <item>
-      <link>http://www.lemonde.fr/m-moyen-format/article/2015/10/09/aux-etats-unis-le-jackpot-des-spots-de-campagne_4786543_4497271.html</link>
-      <title>Aux Etats-Unis, le jackpot des spots de campagne</title>
-      <description>A l’approche de la ­présidentielle, les candidats s’apprêtent à lancer leur offensive cathodique, à coup de clips plus ou moins nauséabonds. De quoi remplir les caisses des chaînes de télévision américaines.</description>
-      <pubDate>Fri, 09 Oct 2015 17:04:18 +0200</pubDate>
-      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4786543/</guid>
-      <enclosure url="http://s2.lemde.fr/image/2015/10/09/644x322/4786540_3_218e_une-image-d-un-clip-de-la-candidate-democrate_be9d4e7c668902ccb607f1dcbb053b5f.jpg" type="image/jpeg" length="55103"/>
-    </item>
-  </channel>
+    <title>Salon de Francfort : Toyota Mirai, la voiture à hydrogène débarque en Europe
+                    </title>
+            <description>La voiture à pile à combustible sera présente sur le salon de l’auto IAA à Francfort en septembre prochain. Quelques exemplaires seront d’ailleurs livrés dans les prochaines semaines en Allemagne. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/3fe/9cf55d7d9adef6a840e6c91b52bd0.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/salon-de-francfort-toyota-mirai-la-voiture-a-hydrogene-debarque-en-europe-909632.html</link>
+    <pubDate>Fri, 18 Sep 2015 03:18:45 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/salon-de-francfort-toyota-mirai-la-voiture-a-hydrogene-debarque-en-europe-909632.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/3fe/9cf55d7d9adef6a840e6c91b52bd0.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
+    <item>
+    <title>Salon de Francfort : Audi l'e-tron quattro, le SUV électrique qui offrirait 500 km d’autonomie</title>
+            <description>La marque aux anneaux dévoile petit à petit ses modèles phares qui seront présentés au salon de Francfort en septembre prochain. Le concept Audi e-tron quattro serait un SUV électrique sans compromis. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/d46/a038429612c19a902ba9a7d9a74dd.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/audi-e-tron-quattro-le-suv-electrique-qui-offrirait-500-km-d-autonomie-908653.html</link>
+    <pubDate>Fri, 18 Sep 2015 03:00:58 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/audi-e-tron-quattro-le-suv-electrique-qui-offrirait-500-km-d-autonomie-908653.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/d46/a038429612c19a902ba9a7d9a74dd.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
+    <item>
+    <title>Disney veut créer l’Internet des jouets grâce au Li-Fi</title>
+            <description>Le centre R&amp;D du géant américain du divertissement a développé une technologie de communication par la lumière à l’aide de microcontrôleurs Linux intégrés dans des ampoules LED du commerce. Mais le débit est encore faible : 1 kbit/s. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/16f/c83d8149f939cde850ec0cc5041e7.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/disney-veut-creer-l-internet-des-jouets-grace-au-li-fi-915546.html</link>
+    <pubDate>Thu, 17 Sep 2015 03:24:57 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/disney-veut-creer-l-internet-des-jouets-grace-au-li-fi-915546.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/16f/c83d8149f939cde850ec0cc5041e7.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
+    <item>
+    <title>Qualcomm dévoile une technologie capable de recharger votre smartphone en 35 minutes</title>
+            <description>Recharger un smartphone ou une tablette est devenu un geste quotidien et parfois agaçant. Qualcomm propose une technologie pour réduire le temps de charge. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/30a/72fcd58a2c3c0499c2bd260dada30.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/batterie-la-technologie-quick-charge-3-0-accelere-le-chargement-de-votre-smartphone-914965.html</link>
+    <pubDate>Tue, 15 Sep 2015 07:35:30 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/batterie-la-technologie-quick-charge-3-0-accelere-le-chargement-de-votre-smartphone-914965.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/30a/72fcd58a2c3c0499c2bd260dada30.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
+    <item>
+    <title>Porsche dévoile Mission E, sa «Tesla killer» </title>
+            <description>A Francfort, la marque automobile a présenté Mission E, une berline 100 % électrique avec à la clé un temps de charge particulièrement bas, grâce à l’utilisation d’une technologie haut tension. Malheureusement, il ne s’agit pour l’instant que d’une voiture concept. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/863/869c76896c3b140a1f056c0f3bf84.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/porsche-presentebrson-tesla-killer-914963.html</link>
+    <pubDate>Fri, 18 Sep 2015 03:16:30 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/porsche-presentebrson-tesla-killer-914963.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/863/869c76896c3b140a1f056c0f3bf84.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
+    <item>
+    <title>Google embauche un ancien de Huyndai pour booster ses voitures autonomes</title>
+            <description>John Krafcik est un vétéran de l’industrie automobile. Il vient d’être propulsé au poste de directeur général du projet de véhicule sans conducteur. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/56c/8c2b59349e0faaa4f16fce74de33c.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/google-embauche-un-ancien-de-huyndai-pour-booster-ses-voitures-autonomes-914765.html</link>
+    <pubDate>Mon, 14 Sep 2015 04:32:05 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/google-embauche-un-ancien-de-huyndai-pour-booster-ses-voitures-autonomes-914765.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/56c/8c2b59349e0faaa4f16fce74de33c.jpg"
+               type="image/jpg"
+               length="176783"
+    />
+
+</item>
+    <item>
+    <title>Salon de Francfort : Quelle sera la voiture connectée de l'année ?</title>
+            <description>Pour la deuxième année consécutive, le jury 01net.com va élire la voiture connectée de l'année. Cette fois, notre équipe va parcourir les allées du salon de Francfort. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/9e1/35d6fa61d104b0f0dd75d022b76a8.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/salon-de-francfort-quelle-sera-la-voiture-connectee-de-l-annee-914657.html</link>
+    <pubDate>Mon, 14 Sep 2015 11:57:47 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/salon-de-francfort-quelle-sera-la-voiture-connectee-de-l-annee-914657.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/9e1/35d6fa61d104b0f0dd75d022b76a8.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
+    <item>
+    <title>Bientôt, les smartphones auront deux fois plus de mémoire</title>
+            <description>Le fabricant sud-coréen Samsung a commencé le production de composants qui permettront d’avoir jusqu’à 6 Go de mémoire contre 3 Go pour la génération précédente. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/922/6fae07be834db6828435b6802a5c0.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/bientot-les-smartphones-auront-deux-fois-plus-de-memoire-913533.html</link>
+    <pubDate>Wed, 09 Sep 2015 09:26:55 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/bientot-les-smartphones-auront-deux-fois-plus-de-memoire-913533.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/922/6fae07be834db6828435b6802a5c0.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
+    <item>
+    <title>
+                        Canon développe un boîtier reflex de 120 Mpix et se prépare à la 8K</title>
+            <description>Canon gonfle ses muscles et promet un boîtier reflex EOS à la définition record de 120 Mpix et du matériel 8K. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/ce3/901c5102158a9e7b257a56d02195d.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/canon-developpe-un-boitier-reflex-de-120-mpix-et-se-prepare-a-la-8k-913096.html</link>
+    <pubDate>Wed, 16 Sep 2015 11:30:10 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/canon-developpe-un-boitier-reflex-de-120-mpix-et-se-prepare-a-la-8k-913096.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/ce3/901c5102158a9e7b257a56d02195d.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
+    <item>
+    <title>
+ 250 Mpix : à quoi servira l'incroyable capteur de Canon ?</title>
+            <description>La définition de 250 Mpix impressionne moins que les capacités du processeur, capable de traiter 1,25 milliard de pixels par seconde. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/956/5fd39b52ba11fa6d5bd77b3bf40cf.jpg"/>]]></description>
+        <link>http://www.01net.com/actualites/photo-canon-annonce-un-capteur-de-250-mpix-912910.html</link>
+    <pubDate>Mon, 07 Sep 2015 07:43:33 +0200</pubDate>
+    <guid isPermaLink="false">http://www.01net.com/actualites/photo-canon-annonce-un-capteur-de-250-mpix-912910.html</guid>
+        <enclosure url="http://img.bfmtv.com/i/0/0/956/5fd39b52ba11fa6d5bd77b3bf40cf.jpg"
+               type="image/jpg"
+               length="0"
+    />
+
+</item>
+    </channel>
 </rss>

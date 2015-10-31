@@ -1,20 +1,9 @@
-<?php
-    class Nouvelles
-    {
-        private $controller;
-
-        function __construct($controller) {
-            $this->controller = $controller;
+<div id="nouvelles_display">
+    <h3><?= $rss->getTitre() ?></h3>
+    <?php
+        foreach ($rss->getNouvelles() as $nouvelle) {
+            print('<p><a href="index.ctrl.php?mode=1&id=' . $nouvelle->getId() . '">' . $nouvelle->getTitre() . '</a>' .
+                ' - [' . $nouvelle->getDate() . ']</p>');
         }
-
-        function output() {
-            $toReturn = '<div>';
-
-            foreach ($this->controller->getFlux()->getNouvelles() as $flux) {
-                $toReturn .= '<h3>' . $flux->getTitre() . '</h3>';
-            }
-            $toReturn .= '</div>';
-
-            return $toReturn;
-        }
-    }
+    ?>
+</div>

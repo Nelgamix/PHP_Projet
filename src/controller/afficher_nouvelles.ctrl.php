@@ -1,32 +1,11 @@
 <?php
 
-    require_once('../model/DAO.class.php');
-    require_once('../view/afficher_nouvelles.view.php');
+require_once('../model/DAO.class.php');
 
-    class NouvellesController {
-        private $id;
-        private $view;
-        private $flux;
+$rss = $dao->getRSSFromId($id);
 
-        function __construct($id) {
-            $this->view = new Nouvelles($this);
-            $this->id = $id;
-            global $dao;
+if ($rss == NULL) {
+    die("Le rss spécifié n'existe pas");
+}
 
-            $this->flux = $dao->getRSSFromId($id);
-
-            if ($this->flux == NULL) {
-                die("Cant fetch rss with id $id");
-            }
-        }
-
-        function render() {
-            $output = $this->view->output();
-
-            print($output);
-        }
-
-        function getFlux() {
-            return $this->flux;
-        }
-    }
+include('../view/afficher_nouvelles.view.php');

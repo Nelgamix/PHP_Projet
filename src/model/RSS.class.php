@@ -18,6 +18,7 @@ class RSS {
     function getUrl()       { return $this->url; }
     function getDate()      { return $this->date; }
     function getNouvelles() { return $this->nouvelles; }
+    function getId()        { return $this->id; }
     
     // Met à jour le flux
     function update() {
@@ -47,19 +48,28 @@ class RSS {
         $this->titre =  $nodeTitle->item(0)->textContent;
         $this->date =   $nodePubDate->item(0)->textContent;
         
-        // Mise à jour du RSS dans la BDD
-        $id = $dao->updateRSS($this)['id'];
-        
-        // Recupère tous les items du flux RSS
-        foreach ($doc->getElementsByTagName('item') as $node) {
+        // Mise à jour du RSS dans la BDD (et récupération de l'id assigné au flux)
+        $this->id = $dao->updateRSS($this)['id'];
+
+        // Fetch et reverse les items trouvés
+        $items = array();
+        foreach ($doc->getElementsByTagName('item') as $item) {
+            $items[] = $item;
+        }
+        $items = array_reverse($items);
+
+        // Parcours les items, crée une nouvelle, la met à jour, et tente de l'insérer dans la BDD
+        foreach ($items as $node) {
             $nouvelle = new Nouvelle();
 
             // Met à jour la nouvelle avec l'information téléchargée
             $nouvelle->update($node);
-            
-            $dao->createNouvelle($nouvelle, $id);
+
+            // Tente de la créer dans la BDD, ne sera pas fait si elle existe déjà
+            $dao->createNouvelle($nouvelle, $this->id);
         }
-        
+
+        // On récupère les nouvelles depuis la bdd
         $this->nouvelles = $dao->getNouvellesFromRSS($this->url);
     }
 }

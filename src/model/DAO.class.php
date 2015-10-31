@@ -79,12 +79,10 @@ class DAO {
     function getRSSFromId($id) {
         $query = "SELECT * FROM RSS WHERE id = $id";
         try {
-            $r = $this->db->query($query);
-            if ($r != NULL) {
-                $object = $r->fetch();
-                $rss = new RSS($object['url']);
+            $r = $this->db->query($query)->fetch();
+            if ($r != NULL && !empty($r)) {
+                $rss = new RSS($r['url']);
                 $rss->update();
-
                 return $rss;
             }
         } catch (PDOException $ex) {
@@ -99,27 +97,25 @@ class DAO {
     // Acces à une nouvelle à partir de son titre et l'ID du flux
     function readNouvellefromTitre($titre, $RSS_id) {
         $safeTitre = $this->db->quote($titre);
-        $safeId = $this->db->quote($RSS_id);
         
-        $query = "SELECT * FROM Nouvelle WHERE titre = $safeTitre AND RSS_id = $safeId";
+        $query = "SELECT * FROM Nouvelle WHERE titre = $safeTitre AND RSS_id = $RSS_id";
         
         try {
             $result = $this->db->query($query)->fetch();
+            if ($result != NULL && !empty($result))
+                return $result[0];
         } catch (PDOException $ex) {
             die("PDO Error :" . $ex->getMessage());
         }
-        
-        return $result;
     }
     
     // Renvoie toutes les nouvelles d'un flux RSS
     function getNouvellesFromRSS($url) {
         $safeUrl = $this->db->quote($url);
-        $query = "SELECT N.titre, N.url, N.date, N.description, N.image FROM Nouvelle N, RSS R WHERE R.url = $safeUrl AND R.id = N.RSS_id";
+        $query = "SELECT N.titre, N.url, N.date, N.description, N.image FROM Nouvelle N, RSS R WHERE R.url = $safeUrl AND R.id = N.RSS_id ORDER BY N.id DESC";
         
         try {
             $results = $this->db->query($query)->fetchAll(PDO::FETCH_CLASS, "Nouvelle");
-            
             return $results;
         } catch (Exception $ex) {
             die("PDO Error :" . $ex->getMessage());
@@ -156,13 +152,20 @@ class DAO {
     // Met à jour le champ image de la nouvelle dans la base
     function updateImageNouvelle(Nouvelle $n, $RSS_id) {
         $imageUrl = $n->getImage();
-        $nouvelleUrl = $this->getIdNouvelle($n);
-        $imageUrlLocal = "images/" . $RSS_id . "_" . $nouvelleUrl . ".jpg";
-        //echo('RSS ID: ' . $RSS_id . ' and URL: ' . $nouvelleUrl . "\n");
-        
-        if (!file_exists($imageUrlLocal)) {
-            file_put_contents($imageUrlLocal, file_get_contents($imageUrl));
-            //echo("Created!\n");
+        if (!($imageUrl == 'default')) {
+            $nouvelleUrl = $this->getIdNouvelle($n);
+            $imageUrlLocal = '../model/images/' . $RSS_id . '_' . $nouvelleUrl . '.jpg';
+
+            if (!file_exists($imageUrlLocal)) {
+                file_put_contents($imageUrlLocal, file_get_contents($imageUrl));
+            }
+        } else {
+            $imageUrlLocal = '../model/images/default.jpg';
+            $imageUrl = 'http://image-link-archive.meteor.com/images/placeholder-640x480.png'; // URL d'une image à mettre en default
+
+            if (!file_exists($imageUrlLocal)) {
+                file_put_contents($imageUrlLocal, file_get_contents($imageUrl));
+            }
         }
     }
     
@@ -172,11 +175,10 @@ class DAO {
         
         try {
             $result = $this->db->query($queryRSS_id)->fetch();
+            return $result['id'];
         } catch (Exception $ex) {
             die("PDO Error :" . $ex->getMessage());
         }
-        
-        return $result['id'];
     }
     
     function getRSSIdFromNouvelle(Nouvelle $n) {
@@ -195,14 +197,37 @@ class DAO {
     function getNouvelleFromId($id) {
         $query = "SELECT * FROM Nouvelle WHERE id = $id";
         try {
-            $r = $this->db->query($query);
-            if ($r != NULL) {
-                $object = $r->fetchAll(PDO::FETCH_CLASS, 'Nouvelle')[0];
-                d($object);
-                return $object;
+            $r = $this->db->query($query)->fetchAll(PDO::FETCH_CLASS, 'Nouvelle');
+            if ($r != NULL && !empty($r)) {
+                return $r[0];
             }
         } catch (PDOException $ex) {
             die("PDO Error :" . $ex->getMessage());
         }
     }
+
+    function getNouvellesFromId($id) {
+        $query = "SELECT * FROM Nouvelle WHERE RSS_id = $id ORDER BY id DESC";
+        try {
+            $r = $this->db->query($query)->fetchAll(PDO::FETCH_CLASS, 'Nouvelle');
+            if ($r != NULL && !empty($r)) {
+                return $r;
+            }
+        } catch (PDOException $ex) {
+            die("PDO Error :" . $ex->getMessage());
+        }
+    }
+
+    // Renvoie toutes les images des nouvelles d'un flux RSS
+    function getNouvellesImgFromId($id) {
+        $imgs = $this->getNouvellesFromId($id);
+        $imgsLoc = array();
+
+        foreach ($imgs as $img) {
+            $imgsLoc[$img->getId()] = $img->getImageLocale();
+        }
+
+        return $imgsLoc;
+    }
+
 }

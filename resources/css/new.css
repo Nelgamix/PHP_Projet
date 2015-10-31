@@ -1,0 +1,47 @@
+body {
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+#titre {
+    text-align: center;
+}
+
+#flux_display {
+    width: 80%;
+    margin: auto;
+}
+
+#flux_display>ul {
+    padding-left: 33px;
+    padding-bottom: 33px;
+}
+
+#nouvelles_display {
+    width: 80%;
+    margin: auto;
+}
+
+#conteneur>div {
+    display: inline-block;
+}
+
+#imagecontent {
+    overflow: auto;
+    border: 1px solid black;
+}
+
+#imagecontent>img {
+    clear: both;
+}
+
+#textcontent {
+    width: 54%;
+    margin-left: 20px;
+    vertical-align: top;
+}
+
+#textcontent>.panel-body>img {
+    display: none;
+}
