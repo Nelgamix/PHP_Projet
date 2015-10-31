@@ -1,12 +1,17 @@
 <?php
 
-    require_once('../model/DAO.class.php');
-    require_once('../view/afficher_nouvelle.view.php');
+require_once('../model/DAO.class.php');
 
-    class NouvelleController {
-        private $nouvelle;
+$nouvelle = $dao->getNouvelleFromId($id);
 
-        function __construct(Nouvelle $nouvelle) {
-            $this->nouvelle = $nouvelle;
-        }
-    }
+if ($nouvelle == NULL) {
+    die("La nouvelle spécifiée n'existe pas");
+}
+
+$titre = $nouvelle->getTitre();
+$description = $nouvelle->getDescription();
+$image = $nouvelle->getImageLocale();
+$url = $nouvelle->getUrl();
+$date = $nouvelle->getDate();
+
+include('../view/afficher_nouvelle.view.php');

@@ -17,10 +17,20 @@ class Nouvelle {
     function getImage()          { return $this->image; }
     function getImageLocale() { 
         global $dao;
-        if ($this->imageLocale == NULL) {
-            $this->imageLocale = "images/" . $dao->getRSSIdFromNouvelle($this) . "_" . $dao->getIdNouvelle($this) . ".jpg";
+        if (!isset($this->imageLocale)) {
+            if ($this->image == "default")
+                $this->imageLocale = "../model/images/default.jpg";
+            else
+                $this->imageLocale = "../model/images/" . $dao->getRSSIdFromNouvelle($this) . "_" . $dao->getIdNouvelle($this) . ".jpg";
         }
         return $this->imageLocale;
+    }
+    function getId() {
+        global $dao;
+        if (!isset($this->id)) {
+            $this->id = $dao->getIdNouvelle($this);
+        }
+        return $this->id;
     }
     
     function setImageLocal($imageUrlLocal)     { $this->image = $imageUrlLocal; }
@@ -36,13 +46,10 @@ class Nouvelle {
         $this->description =  $description->item(0)->textContent;
         $this->date =         $pubDate->item(0)->textContent;
         $this->url =          $link->item(0)->textContent;
-        $this->image =        $nodeEnclosure->item(0)->attributes->getNamedItem('url')->nodeValue;
+        if ($nodeEnclosure != NULL)
+            $this->image = $nodeEnclosure->item(0)->attributes->getNamedItem('url')->nodeValue;
+        else
+            $this->image = "default";
     }
-      
-    /*function downloadImage() {
-        global $dao;
-        
-        $dao->updateImageNouvelle($this);
-    }*/
     
 }
