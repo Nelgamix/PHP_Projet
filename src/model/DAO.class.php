@@ -15,6 +15,10 @@ class DAO {
         } catch (PDOException $e) {
             exit("Erreur ouverture BD : " . $e->getMessage());
         }
+
+        if (!is_dir('images')) {
+            mkdir('images', 0777, true);
+        }
     }
 
     function constructRSS($id) {
