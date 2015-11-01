@@ -1,6 +1,6 @@
 <fieldset>
     <legend>Compte</legend>
-    <div class="col-md-6 form_nc">
+    <div class="col-md-6 form_nc" style="border-left: 1px solid #d8d8d8">
         <!-- FORM LOGIN -->
         <form action="login.ctrl.php" method="post">
             <table>

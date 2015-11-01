@@ -44,8 +44,11 @@ class DAO {
         try {
             $v_rss = $this->db->query("SELECT * FROM RSS")->fetchAll(PDO::FETCH_CLASS, 'RSS');
             if (!empty($v_rss)) {
-                foreach ($v_rss as $rss) {
+                foreach ($v_rss as $k => $rss) {
                     $rss->setNouvelles($this->getNouvellesFromId($rss->getId()));
+                    // On indice correctement le tableau ($v_rss['id'])
+                    $v_rss[$rss->getId()] = $rss;
+                    unset($v_rss[$k]);
                 }
 
                 return $v_rss;
@@ -226,22 +229,13 @@ class DAO {
     }
 
     function getAllRSSof($user) {
-        $user = $this->db->quote($user);
-        $query = "SELECT * FROM Abonnement WHERE utilisateur_login = $user";
-
-        try {
-            $results = $this->db->query($query)->fetchAll(PDO::FETCH_CLASS, 'Abonnement');
+        $results = $this->getAllAbonnements($user);
+        if (isset($results) && !empty($results)) {
             $v_rss = array();
             foreach ($results as $result) {
-                $rss = $this->constructRSS($result->getRSSid());
-                if ($rss != null) {
-                    $v_rss[] = $rss;
-                }
+                $v_rss[] = $this->constructRSS($result->getRSSid());
             }
-
             return $v_rss;
-        } catch (PDOException $ex) {
-            die('PDOException: ' . $ex);
         }
     }
 
@@ -441,6 +435,86 @@ class DAO {
             return $results;
         } catch (PDOException $ex) {
             die('PDOException: ' . $ex);
+        }
+    }
+
+    function addAbonnement($user, $RSS_id, $nom = "Pas de nom", $categorie = "Defaut") {
+        $user = $this->db->quote($user);
+        $nom = $this->db->quote($nom);
+        $categorie = $this->db->quote($categorie);
+
+        $query = "INSERT INTO abonnement VALUES ($user, $RSS_id, $nom, $categorie)";
+
+        if ($this->getRSSFromId($RSS_id) != NULL) {
+            try {
+                $result = $this->db->exec($query);
+
+                if ($result < 1) {
+                    return false;
+                }
+
+                return true;
+            } catch (PDOException $ex) {
+                die('PDOException: ' . $ex->getMessage());
+            }
+        } else {
+            return false;
+        }
+    }
+
+    function removeAbonnement($user, $RSS_id) {
+        $user = $this->db->quote($user);
+
+        $query = "DELETE FROM abonnement WHERE utilisateur_login = $user AND RSS_id = $RSS_id";
+
+        try {
+            $result = $this->db->exec($query);
+
+            if ($result < 1) {
+                return false;
+            }
+
+            return true;
+        } catch (PDOException $ex) {
+            die('PDOException: ' . $ex->getMessage());
+        }
+    }
+
+    function changerNomAbonnement($user, $RSS_id, $nom) {
+        $user = $this->db->quote($user);
+        $nom = $this->db->quote($nom);
+
+        $query = "UPDATE abonnement SET nom = $nom WHERE utilisateur_login = $user AND RSS_id = $RSS_id";
+
+        try {
+            $result = $this->db->exec($query);
+
+            if ($result < 1) {
+                return false;
+            }
+
+            return true;
+        } catch (PDOException $ex) {
+            die('PDOException: ' . $ex->getMessage());
+        }
+    }
+
+    function changerCategorieAbonnement($user, $RSS_id, $categorie) {
+        $user = $this->db->quote($user);
+        $categorie = $this->db->quote($categorie);
+
+        $query = "UPDATE abonnement SET categorie = $categorie WHERE utilisateur_login = $user AND RSS_id = $RSS_id";
+
+        try {
+            $result = $this->db->exec($query);
+
+            if ($result < 1) {
+                return false;
+            }
+
+            return true;
+        } catch (PDOException $ex) {
+            die('PDOException: ' . $ex->getMessage());
         }
     }
 

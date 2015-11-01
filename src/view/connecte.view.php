@@ -1,31 +1,58 @@
 <fieldset>
     <legend>Relatif au compte</legend>
-    <div>
+    <div id="connecte_content">
         <p>
             Connecté avec login <?= $user ?> <a href="parametres.ctrl.php?disconnect=true">Se déconnecter</a>
         </p>
-        <p>
-            Actions globales sur le compte
+        <div>
+            <h4>Actions globales sur le compte</h4>
             <ul>
-                <li>Ajouter un abonnement</li>
                 <li>Supprimer tous les abonnements</li>
                 <li>...</li>
             </ul>
-        </p>
-        <p>
-            Actions sur abonnements
-            <ul>
-                <li>Catégorie - Nom (Abonnement) [Changer le nom] [Changer la catégorie] [Supprimer]</li>
-                <?php
+        </div>
+        <div>
+            <form action="parametres.ctrl.php" method="post">
+                <h4>Abonnements disponibles</h4>
+                <ul>
+                    <?php
+                        foreach ($v_rss as $rss) {
+                            print("<li><strong>{$rss->getTitre()} [{$rss->getId()}]</strong> &rightarrow; [Màj: {$rss->getDate()}] " .
+                                "<a href='index.ctrl.php?mode=2&id={$rss->getId()}' class='btn btn-xs btn-default'>Accéder</a> " .
+                                "$rss->userBtn\n");
+                        }
+                    ?>
+                </ul>
+                <div class="alert alert-warning">
+                    <strong>Avant TOUT ajout</strong> (renseigner les champs suivants):<br />
+                    Nom de l'ajout <input type="text" name="nom" />
+                    Catégorie de l'ajout <input type="text" name="categorie" />
+                </div>
+            </form>
+        </div>
+        <div>
+            <form action="parametres.ctrl.php" method="post">
+                <h4>Abonnements actifs</h4>
+                <ul>
+                    <?php
                     if (!empty($userAbo)) {
                         foreach ($userAbo as $abo) {
-                            print("<li>{$abo->getCategorie()} - {$abo->getNom()} ({$abo->getRSSid()}) [Changer le nom] [Changer la catégorie] [Supprimer]</li>");
+                            print("<li>{$abo->getCategorie()} - {$abo->getNom()} ({$abo->rssTitre}) " .
+                                "<a href='index.ctrl.php?mode=2&id={$abo->getRSSid()}' class='btn btn-xs btn-default'>Accéder</a> " .
+                                "<input type='submit' class='btn btn-xs btn-success' name='{$abo->getRSSid()}' value='Changer le nom' /> " .
+                                "<input type='submit' class='btn btn-xs btn-success' name='{$abo->getRSSid()}' value='Changer la catégorie' /> " .
+                                "<input type='submit' class='btn btn-xs btn-warning' name='{$abo->getRSSid()}' value='Supprimer' /></li>\n");
                         }
                     } else {
                         print("<li>Aucun abonnement.</li>");
                     }
-                ?>
-            </ul>
-        </p>
+                    ?>
+                </ul>
+                <div class="alert alert-warning">
+                    <strong>Avant TOUT changement</strong> (renseigner le champ suivant):<br />
+                    Nouveau nom/catégorie <input type="text" name="champPr" />
+                </div>
+            </form>
+        </div>
     </div>
 </fieldset>

@@ -66,6 +66,7 @@ body {
 
 .form_nc {
     text-align: center;
+    border-right: 1px solid #d8d8d8;
 }
 
 .form_nc form {
@@ -78,4 +79,20 @@ body {
 
 .form_nc form td {
     padding: 2px;
+}
+
+#connecte_content {
+    padding-left: 10px;
+}
+
+#connecte_content>div {
+    margin: 10px auto;
+}
+
+#connecte_content h4 {
+    font-style: italic;
+}
+
+fieldset {
+    margin-bottom: 20px;
 }
