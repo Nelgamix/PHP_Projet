@@ -17,7 +17,7 @@ class DAO {
             exit("Erreur ouverture BD : " . $e->getMessage());
         }
 
-        if (!is_dir('images')) {
+        if (!is_dir('../model/images')) {
             mkdir('images', 0777, true);
         }
     }
