@@ -35,7 +35,7 @@ if (isset($_POST['connect'])) {
 
     session_commit();
 
-    die("Connecté: $log $message" . " <a href='index.ctrl.php'>get back</a>");
+    //die("Connecté: $log $message" . " <a href='index.ctrl.php'>get back</a>");
 } else if (isset($_POST['signup'])) {
     print('Trying to signup');
 
@@ -50,7 +50,8 @@ if (isset($_POST['connect'])) {
 
     session_commit();
 
-    die("Compte crée avec user $user" . " <a href='index.ctrl.php'>get back</a>");
+    //die("Compte crée avec user $user" . " <a href='index.ctrl.php'>get back</a>");
 }
 
+header('Location: parametres.ctrl.php');
 die('Sometttthhhhingssss went wrong');

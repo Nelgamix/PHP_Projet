@@ -3,7 +3,7 @@
         <h3 class="panel-title"><?= $titre ?></h3>
     </div>
     <div class="panel-body" id="conteneur">
-        <div id="imagecontent"><img src="<?= $image ?>" width="640" height="360" /></div>
+        <div id="imagecontent"><img src="<?= $image ?>" width="640" height="420" /></div>
         <div class="panel panel-default" id="textcontent">
             <div class="panel-heading">
                 <h3 class="panel-title">Contenu</h3>

@@ -8,7 +8,7 @@ class RSS {
     private $date;  // Date du dernier téléchargement du flux
     private $nouvelles; // Liste des nouvelles du flux
 
-    // Contructeur TOCHANGE
+    // Contructeur
     function __construct($url = "") {
         if ($url != "") $this->url = $url;
     }
@@ -17,7 +17,13 @@ class RSS {
     function setDate($date) { $this->date = $date; }
 
     // Fonctions getter
-    function getTitre()     { return $this->titre; }
+    function getTitre()     {
+        if (!isset($this->titre) || $this->titre == "") {
+            return 'Url: ' . $this->url;
+        } else {
+            return $this->titre;
+        }
+    }
     function getUrl()       { return $this->url; }
     function getDate()      { return $this->date; }
     function getNouvelles() { return $this->nouvelles; }

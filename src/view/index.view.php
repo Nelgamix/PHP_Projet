@@ -28,6 +28,13 @@
                             <li><a href="parametres.ctrl.php">Paramètres</a></li>
                             <li><a href="#about">A propos</a></li>
                         </ul>
+                        <?php
+                            if ($logged):
+                        ?>
+                                <p class="navbar-text navbar-right">Connecté en tant que <a href="parametres.ctrl.php" class="navbar-link"><?= $user ?></a></p>
+                        <?php
+                            endif;
+                        ?>
                         <ul class="nav navbar-right">
                             <form class="navbar-form navbar-left" role="search" action="index.ctrl.php" method="GET">
                                 <div class="form-group">
@@ -44,7 +51,7 @@
                 <h1><?= $titrePrincipal ?></h1>
             </div>
             <?php
-                if ($mode == 4):
+                if ($mode == 4 && $helpMessages):
             ?>
             <div id="description" class="alert alert-dismissable alert-info">
                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>

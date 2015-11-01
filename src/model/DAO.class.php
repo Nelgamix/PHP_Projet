@@ -1,6 +1,7 @@
 <?php
 require_once('RSS.class.php');
 require_once('Nouvelle.class.php');
+require_once('Abonnement.class.php');
 
 $dao = new DAO();
 
@@ -40,17 +41,20 @@ class DAO {
     }
 
     function constructAllRSS() {
-        $v_rss = array();
+        try {
+            $v_rss = $this->db->query("SELECT * FROM RSS")->fetchAll(PDO::FETCH_CLASS, 'RSS');
+            if (!empty($v_rss)) {
+                foreach ($v_rss as $rss) {
+                    $rss->setNouvelles($this->getNouvellesFromId($rss->getId()));
+                }
 
-        for ($i = 1;;$i++) {
-            $rss = $this->constructRSS($i);
-            if ($rss == null) {
-                break;
+                return $v_rss;
             }
-            $v_rss[] = $rss;
+        } catch (PDOException $ex) {
+            die('PDOException: ' . $ex->getMessage());
         }
 
-        return $v_rss;
+        return array();
     }
 
     //////////////////////////////////////////////////////////
@@ -59,22 +63,30 @@ class DAO {
 
     // Crée un nouveau flux à partir d'une URL
     // Si le flux existe déjà on ne le crée pas
+    // return false si on n'a rien fait, true sinon
     function createRSS($url) {
         try {
             $safeUrl = $this->db->quote($url);
-            $q = "INSERT INTO RSS (url) VALUES ($safeUrl)";
-            $r = $this->db->exec($q);
-            if ($r == 0) {
-                die("createRSS error: no rss inserted\n");
+            $object = $this->readRSSfromURL($url);
+            if ($object != null) {
+                return false;
             }
 
-            return $this->readRSSfromURL($url);
+            $q = "INSERT INTO RSS (url) VALUES ($safeUrl)";
+            $r = $this->db->exec($q);
+
+            if ($r < 1) {
+                return false;
+            }
+
+            return true;
         } catch (PDOException $e) {
             die("PDO Error :" . $e->getMessage());
         }
     }
 
     // Acces à un objet RSS à partir de son URL
+    // return false si il n'existe pas, le rss sinon
     function readRSSfromURL($url) {
         $safeUrl = $this->db->quote($url);
         
@@ -86,7 +98,8 @@ class DAO {
             if ($result != false) {
                 $rss = new RSS($result['url']);
             } else {
-                $rss = $this->createRSS($url);
+                //$rss = $this->createRSS($url);
+                return false;
             }
         } catch (Exception $ex) {
             die("PDO Error :" . $ex->getMessage());
@@ -138,9 +151,9 @@ class DAO {
         $query = "DELETE FROM Nouvelle WHERE RSS_id = $id";
         try {
             $r = $this->db->exec($query);
-            if ($r < 1) {
+            /*if ($r < 1) {
                 return false;
-            }
+            }*/
         } catch (PDOException $ex) {
             die("PDO Error :" . $ex->getMessage());
         }
@@ -160,14 +173,76 @@ class DAO {
         try {
             $r = $this->db->exec($query);
             $this->db->exec($queryResetID);
-            if ($r < 1) {
+            /*if ($r < 1) {
                 return false;
-            }
+            }*/
         } catch (PDOException $ex) {
             die("PDO Error :" . $ex->getMessage());
         }
 
         return true;
+    }
+
+    function deleteRSS($id) {
+        if ($this->cleanRSS($id)) {
+            $query = "DELETE FROM RSS WHERE id = $id";
+
+            try {
+                $r = $this->db->exec($query);
+
+                if ($r < 1) {
+                    return false;
+                } else {
+                    return true;
+                }
+            } catch (PDOException $ex) {
+                die('PDOException: ' . $ex->getMessage());
+            }
+        } else {
+            return false;
+        }
+    }
+
+    function deleteAllRSS() {
+        if ($this->cleanAllRSS()) {
+            $query = "DELETE FROM RSS";
+            $queryResetID = "DELETE FROM sqlite_sequence WHERE name = 'rss'";
+
+            try {
+                $r = $this->db->exec($query);
+                $this->db->exec($queryResetID);
+
+                if ($r < 1) {
+                    return false;
+                } else {
+                    return true;
+                }
+            } catch (PDOException $ex) {
+                die("PDO Error :" . $ex->getMessage());
+            }
+        } else {
+            return false;
+        }
+    }
+
+    function getAllRSSof($user) {
+        $user = $this->db->quote($user);
+        $query = "SELECT * FROM Abonnement WHERE utilisateur_login = $user";
+
+        try {
+            $results = $this->db->query($query)->fetchAll(PDO::FETCH_CLASS, 'Abonnement');
+            $v_rss = array();
+            foreach ($results as $result) {
+                $rss = $this->constructRSS($result->getRSSid());
+                if ($rss != null) {
+                    $v_rss[] = $rss;
+                }
+            }
+
+            return $v_rss;
+        } catch (PDOException $ex) {
+            die('PDOException: ' . $ex);
+        }
     }
 
     //////////////////////////////////////////////////////////
@@ -352,5 +427,21 @@ class DAO {
         return false;
     }
 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Abonnements
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    function getAllAbonnements($user) {
+        $user = $this->db->quote($user);
+        $query = "SELECT * FROM Abonnement WHERE utilisateur_login = $user";
+
+        try {
+            $results = $this->db->query($query)->fetchAll(PDO::FETCH_CLASS, 'Abonnement');
+
+            return $results;
+        } catch (PDOException $ex) {
+            die('PDOException: ' . $ex);
+        }
+    }
 
 }

@@ -58,7 +58,7 @@
             <div id="backoffice">
                 <p>Actions globales</p>
                 <ul>
-                    <li><a href="backoffice.ctrl.php?action=add" class="btn btn-xs btn-primary">Ajout d'un flux</a></li>
+                    <li><a href="#" onclick="add()" class="btn btn-xs btn-primary">Ajout d'un flux</a></li>
                     <li><a href="backoffice.ctrl.php?action=update&id=0" class="btn btn-xs btn-primary">Mise à jour des flux</a></li>
                     <li><a href="backoffice.ctrl.php?action=clean&id=0" class="btn btn-xs btn-warning">Vidages des flux</a></li>
                     <li><a href="backoffice.ctrl.php?action=delete&id=0" class="btn btn-xs btn-danger">Suppression de tous les flux</a></li>
@@ -67,7 +67,7 @@
                 <ul>
                     <?php
                         foreach ($v_rss as $rss) {
-                            print("<li><strong>{$rss->getTitre()}</strong> &rightarrow; [Nouvelles: {$rss->nbNouvelles}] [Màj: {$rss->getDate()}] " .
+                            print("<li><strong>{$rss->getTitre()} [{$rss->getId()}]</strong> &rightarrow; [Nouvelles: {$rss->nbNouvelles}] [Màj: {$rss->getDate()}] " .
                                 "<a href='index.ctrl.php?mode=2&id={$rss->getId()}' class='btn btn-xs btn-default'>Accéder</a> " .
                                 "<a href='backoffice.ctrl.php?action=update&id={$rss->getId()}' class='btn btn-xs btn-primary'>Mettre à jour</a> " .
                                 "<a href='backoffice.ctrl.php?action=clean&id={$rss->getId()}' class='btn btn-xs btn-warning'>Vider</a> " .
@@ -91,5 +91,16 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="../../resources/js/bootstrap.min.js"></script>
+        <script>
+            function add() {
+                var response = prompt("Entrez l'url du flux à ajouter", "http://www.url.com/flux");
+
+                if (response !== "" && response != null) {
+                    window.location.replace("backoffice.ctrl.php?action=add&url=" + response);
+                } else {
+                    return false;
+                }
+            }
+        </script>
     </body>
 </html>

@@ -22,6 +22,13 @@
                         </button>
                         <a class="navbar-brand" href="index.ctrl.php">RSS Listings</a>
                     </div>
+                    <?php
+                    if ($logged):
+                        ?>
+                        <p class="navbar-text navbar-right">Connecté en tant que <a href="#" class="navbar-link"><?= $user ?></a></p>
+                        <?php
+                    endif;
+                    ?>
                     <div id="navbar" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
                             <li><a href="index.ctrl.php">Home</a></li>
@@ -36,77 +43,39 @@
                 <h1><?= $titrePrincipal ?></h1>
             </div>
 
+            <?php
+                if ($helpMessages):
+            ?>
             <div id="description" class="alert alert-dismissable alert-info">
                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                 <h2>Paramètres</h2><br />Vous pouvez régler vos paramètres ici.<br />
                 Si vous voulez avoir plus de possibilités, merci de vous enregistrer.
             </div>
+            <?php
+                endif;
+            ?>
         </header>
 
         <div id="contents">
-            <?= $content ?>
             <?php
-                if ($logged):
+                if ($logged) {
+                    include('connecte.view.php');
+                } else {
+                    include('non_connecte.view.php');
+                }
             ?>
-            <div>
-                Connecté avec login <?= $user ?> <a href="parametres.ctrl.php?disconnect=true">Se déconnecter</a>
-            </div>
-            <?php
-                else:
-            ?>
-            <!-- FORM LOGIN -->
-            <form action="login.ctrl.php" method="post">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Se connecter</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Utilisateur: </td>
-                            <td><input type="text" name="user" /></td>
-                        </tr>
-                        <tr>
-                            <td>Mot de passe: </td>
-                            <td><input type="password" name="password" /></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td><input type="submit" name="connect" value="Se connecter" /></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </form>
-            <!-- FORM NOUVEL USER -->
-            <form action="login.ctrl.php" method="post">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>S'inscrire</th>
-                        <th></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Utilisateur: </td>
-                        <td><input type="text" name="user" /></td>
-                    </tr>
-                    <tr>
-                        <td>Mot de passe: </td>
-                        <td><input type="password" name="password" /></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><input type="submit" name="signup" value="S'inscrire" /></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </form>
-            <?php
-                endif
-            ?>
+            <fieldset>
+                <legend>Autres</legend>
+                <form action="parametres.ctrl.php" method="post">
+                    <div class="col-md-3">
+                        <p>
+                            <input type="checkbox" name="helpMessages" <?= $helpMessages ?>/> Afficher les messages d'aide<br />
+                            <input type="checkbox" name="showFluxGeneraux" <?= $showFluxGeneraux ?>/> Afficher les flux généraux à l'application<br />
+                        </p>
+                        <p><input type="submit" value="Valider" name="valider" style="float: right" /></p>
+                    </div>
+                </form>
+            </fieldset>
         </div>
 
         <footer>

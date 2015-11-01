@@ -63,3 +63,19 @@ body {
 #backoffice li {
     margin-bottom: 5px;
 }
+
+.form_nc {
+    text-align: center;
+}
+
+.form_nc form {
+    display: inline-block;
+}
+
+.form_nc form th {
+    text-align: center;
+}
+
+.form_nc form td {
+    padding: 2px;
+}
