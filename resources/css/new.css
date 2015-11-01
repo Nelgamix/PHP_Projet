@@ -60,7 +60,7 @@ body {
     display: none;
 }
 
-li {
+body>div li {
     margin-bottom: 5px;
 }
 

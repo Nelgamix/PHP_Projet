@@ -35,14 +35,14 @@
                         <?php
                             endif;
                         ?>
-                        <ul class="nav navbar-right">
+                        <!--<ul class="nav navbar-right">
                             <form class="navbar-form navbar-left" role="search" action="index.ctrl.php" method="GET">
                                 <div class="form-group">
                                     <input type="text" class="form-control input-sm" placeholder="Le Monde, ..." name="search">
                                 </div>
                                 <button type="submit" class="btn btn-sm btn-default">Rechercher</button>
                             </form>
-                        </ul>
+                        </ul>-->
                     </div><!--/.nav-collapse -->
                 </div>
             </nav>
