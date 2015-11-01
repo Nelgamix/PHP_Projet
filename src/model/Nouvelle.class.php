@@ -46,7 +46,7 @@ class Nouvelle {
         $this->description =  $description->item(0)->textContent;
         $this->date =         $pubDate->item(0)->textContent;
         $this->url =          $link->item(0)->textContent;
-        if ($nodeEnclosure != NULL)
+        if ($nodeEnclosure != NULL && $nodeEnclosure->item(0) != NULL)
             $this->image = $nodeEnclosure->item(0)->attributes->getNamedItem('url')->nodeValue;
         else
             $this->image = "default";

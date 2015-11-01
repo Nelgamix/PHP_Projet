@@ -139,8 +139,8 @@ class DAO {
                 $rss->update();
                 return $rss;
             }
-        } catch (PDOException $ex) {
-            die("PDO Error :" . $ex->getMessage());
+        } catch (Exception $e) {
+            die("Error: " . $e->getMessage());
         }
     }
 
@@ -368,12 +368,15 @@ class DAO {
     }
 
     // Renvoie toutes les images des nouvelles d'un flux RSS
-    function getNouvellesImgFromId($id) {
+    function getNouvellesTitreImg($id) {
         $imgs = $this->getNouvellesFromId($id);
         $imgsLoc = array();
 
         foreach ($imgs as $img) {
-            $imgsLoc[$img->getId()] = $img->getImageLocale();
+            $imgsLoc[$img->getId()] = array(
+                                                'url' => $img->getImageLocale(),
+                                                'titre' => $img->getTitre()
+                                            );
         }
 
         return $imgsLoc;
@@ -504,6 +507,24 @@ class DAO {
         $categorie = $this->db->quote($categorie);
 
         $query = "UPDATE abonnement SET categorie = $categorie WHERE utilisateur_login = $user AND RSS_id = $RSS_id";
+
+        try {
+            $result = $this->db->exec($query);
+
+            if ($result < 1) {
+                return false;
+            }
+
+            return true;
+        } catch (PDOException $ex) {
+            die('PDOException: ' . $ex->getMessage());
+        }
+    }
+
+    function removeAllSubscriptions($user) {
+        $user = $this->db->quote($user);
+
+        $query = "DELETE FROM abonnement WHERE utilisateur_login = $user";
 
         try {
             $result = $this->db->exec($query);

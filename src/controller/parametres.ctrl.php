@@ -47,6 +47,10 @@ if ($logged) {
             $rss->userBtn = "<input type='submit' name='{$rss->getId()}' class='btn btn-xs btn-warning' value=\"S'abonner\" />";
         }
     }
+
+    if (isset($_POST['deleteAll']) && $_POST['deleteAll'] == "true") {
+        $dao->removeAllSubscriptions($user);
+    }
 }
 
 include('../view/parametres.view.php');

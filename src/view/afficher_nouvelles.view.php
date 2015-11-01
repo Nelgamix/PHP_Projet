@@ -6,10 +6,12 @@ foreach ($v_rss as $rss) {
 <div id="nouvelles_display">
     <h3><?= $rss->getTitre() ?> (<a href="<?= $rss->getUrl() ?>" title="Accéder au flux">lien flux</a>)</h3>
     <?php
+        $i = 0;
         foreach ($rss->getNouvelles() as $nouvelle) {
             print('<p><a href="index.ctrl.php?mode=1&id=' . $nouvelle->getId() . '">' . $nouvelle->getTitre() . '</a>' .
                 ' - [' . $nouvelle->getDate() . ']</p>');
             $content = true;
+            if (++$i >= $resultByFlux) break;
         }
     ?>
 </div>

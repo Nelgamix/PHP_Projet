@@ -33,7 +33,7 @@
                         <ul class="nav navbar-nav">
                             <li><a href="index.ctrl.php">Home</a></li>
                             <li class="active"><a href="parametres.ctrl.php">Paramètres</a></li>
-                            <li><a href="#about">A propos</a></li>
+                            <li><a href="backoffice.ctrl.php">Backoffice (debug)</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
@@ -54,6 +54,10 @@
             <?php
                 endif;
             ?>
+            <?php
+                if (isset($message))
+                    print($message);
+            ?>
         </header>
 
         <div id="contents">
@@ -71,6 +75,7 @@
                         <p>
                             <input type="checkbox" name="helpMessages" <?= $helpMessages ?>/> Afficher les messages d'aide<br />
                             <input type="checkbox" name="showFluxGeneraux" <?= $showFluxGeneraux ?>/> Afficher les flux généraux à l'application<br />
+                            <input type="number" name="resultByFlux" step="5" min="10" max="250" value="<?= $resultByFlux ?>" /> Nombre de résultats max par flux<br />
                         </p>
                         <p><input type="submit" value="Valider" name="valider" style="float: right" /></p>
                     </div>

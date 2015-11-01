@@ -26,7 +26,7 @@
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="#">Home</a></li>
                             <li><a href="parametres.ctrl.php">Paramètres</a></li>
-                            <li><a href="#about">A propos</a></li>
+                            <li><a href="backoffice.ctrl.php">Backoffice (debug)</a></li>
                         </ul>
                         <?php
                             if ($logged):
@@ -134,7 +134,7 @@
         </div>
         
         <footer>
-            <div>(DEBUG: <a href="backoffice.ctrl.php" title="accès au backoffice">backoffice</a>)</div>
+            <p><strong>Copyright</strong> C 2015 (Haha)</p>
         </footer>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -7,7 +7,8 @@
         <div>
             <h4>Actions globales sur le compte</h4>
             <ul>
-                <li>Supprimer tous les abonnements</li>
+                <li><a href="parametres.ctrl.php?deleteAll=true" class="btn btn-xs btn-danger"
+                       title="Supprimer tous les abonnements du compte">Supprimer tous les abonnements</a></li>
                 <li>...</li>
             </ul>
         </div>

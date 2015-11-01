@@ -26,7 +26,7 @@
                         <ul class="nav navbar-nav">
                             <li><a href="index.ctrl.php">Home</a></li>
                             <li><a href="parametres.ctrl.php">Paramètres</a></li>
-                            <li><a href="#about">A propos</a></li>
+                            <li class="active"><a href="backoffice.ctrl.php">Backoffice (debug)</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
@@ -56,6 +56,10 @@
 
         <div id="contents">
             <div id="backoffice">
+                <p>Statistiques globales</p>
+                <ul>
+                    <li>Nombre de nouvelles au total: <?= $data['nbNouvelles'] ?></li>
+                </ul>
                 <p>Actions globales</p>
                 <ul>
                     <li><a href="#" onclick="add()" class="btn btn-xs btn-primary">Ajout d'un flux</a></li>

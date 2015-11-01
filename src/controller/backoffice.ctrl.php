@@ -102,9 +102,12 @@ if (isset($_GET['action'])) {
 
 $v_rss = $dao->constructAllRSS();
 
+$data['nbNouvelles'] = 0;
+
 foreach ($v_rss as $rss) {
     // count nouvelles
     $rss->nbNouvelles = count($rss->getNouvelles());
+    $data['nbNouvelles'] += $rss->nbNouvelles;
 }
 
 include('../view/backoffice.view.php');

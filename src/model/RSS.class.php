@@ -49,8 +49,12 @@ class RSS {
         $doc = new DOMDocument;
 
         // Telecharge le fichier XML
-        $doc->load($filename);
-        
+        try {
+            $doc->load($filename);
+        } catch (Exception $e) {
+            throw $e;
+        }
+
         // Recupère les éléments principaux du flux
         $nodeTitle =    $doc->getElementsByTagName('title');
         $nodePubDate =  $doc->getElementsByTagName('pubDate');

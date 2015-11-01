@@ -1,400 +1,176 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
-     xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" version="2.0">
-    <channel>
-        <atom:link href="http://www.01net.com/actualites/technos/" rel="self" type="application/rss+xml" />
-        <title>Technos - 01net</title>
-        <link>http://www.01net.com/actualites/technos/</link>
-        <description>L'actualité des nouvelles technologies sur 01net : internet, jeu vidéo, musique, produits high tech</description>
-        <language>fr</language>
-        <copyright>Copyright 01NET</copyright>
-        <pubDate>Sun, 01 Nov 2015 06:07:11 +0100</pubDate>
-        <lastBuildDate>Sun, 01 Nov 2015 06:07:11 +0100</lastBuildDate>
-        <ttl>15</ttl>
-        <image>
-            <title>Technos - 01net</title>
-            <url>http://img.bfmtv.com/ressources/img/logo/logo-01net-gris.png</url>
-            <link>http://www.01net.com/actualites/technos/</link>
-        </image>    <item>
-    <title>RankBrain : comment Google booste son moteur de recherche à coup d'intelligence artificielle
-                    </title>
-            <description>Le géant du web a développé un algorithme qui permet à ses serveurs de deviner le sens des requêtes des internautes. Basée sur l’apprentissage automatique, cette technique semble très bien fonctionner. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/3c0/cc8ba8bdb25d0f4e7e842f44edcec.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/google-booste-son-moteur-de-recherche-a-coup-d-intelligence-artificielle-925546.html</link>
-    <pubDate>Wed, 28 Oct 2015 03:09:58 +0100</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/google-booste-son-moteur-de-recherche-a-coup-d-intelligence-artificielle-925546.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/3c0/cc8ba8bdb25d0f4e7e842f44edcec.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bac : Toute l'actualité sur Le Monde.fr.</title>
+    <description>Bac - Découvrez gratuitement tous les articles, les vidéos et les infographies de la rubrique Bac sur Le Monde.fr.</description>
+    <copyright>Copyright Le Monde.fr</copyright>
+    <link>http://www.lemonde.fr/bac-lycee/rss_full.xml</link>
+    <atom:link href="http://www.lemonde.fr/bac-lycee/rss_full.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 01 Nov 2015 19:21:53 +0100</pubDate>
+    <image>
+      <url>http://www.lemonde.fr/medias/web/img/export/logo_lmfr_90x20_export.png</url>
+      <title>Bac : Toute l'actualité sur Le Monde.fr.</title>
+      <link>http://www.lemonde.fr/bac-lycee/rss_full.xml</link>
+    </image>
     <item>
-    <title>
-                            Quelques 20 000 nouveautés seraient dévoilées au prochain CES de Las Vegas !</title>
-            <description>L'édition 2016 du Consumer electronic show devrait encore être une année record pour les annonces de produits. Avec des lancements aussi du côté des entreprises françaises. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/178/338e24d5a69f67b2aba348316acbe.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/quelles-sont-les-principales-nouveautes-attendues-au-ces-2016-924763.html</link>
-    <pubDate>Fri, 23 Oct 2015 08:42:41 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/quelles-sont-les-principales-nouveautes-attendues-au-ces-2016-924763.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/178/338e24d5a69f67b2aba348316acbe.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://www.lemonde.fr/bac-lycee/article/2015/10/28/bac-les-recales-pourront-conserver-leurs-notes-et-redoubler-dans-leur-lycee_4798536_4401499.html</link>
+      <title>Bac : les recalés pourront conserver leurs notes et redoubler dans leur lycée</title>
+      <description>Mode d’emploi des nouveautés qui devraient simplifier la vie des candidats qui repassent l’examen cette année et les suivantes.</description>
+      <pubDate>Wed, 28 Oct 2015 14:28:44 +0100</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4798536/</guid>
+      <enclosure url="http://s1.lemde.fr/image/2015/10/28/644x322/4798534_3_25e9_les-eleves-qui-repassent-leur-bac-en-juin-p_ab8a6278be21eaa2bafd4b57258e7b79.jpg" type="image/jpeg" length="29837"/>
+    </item>
     <item>
-    <title>Vingt-deux start-up représenteront la France au CES 2016 de Las Vegas</title>
-            <description>Les jeunes pousses ont été sélectionnées par Business France pour participer en janvier prochain à la grand-messe de l’électronique mondiale. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/a20/c3ca278b5973735f27ac4b6c1f38d.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/vingt-deux-start-up-representeront-la-france-au-ces-2016-de-las-vegas-924750.html</link>
-    <pubDate>Fri, 23 Oct 2015 08:07:36 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/vingt-deux-start-up-representeront-la-france-au-ces-2016-de-las-vegas-924750.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/a20/c3ca278b5973735f27ac4b6c1f38d.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://uneanneeaulycee.blog.lemonde.fr/2015/10/16/les-vacances/</link>
+      <title>C'est les vacances !</title>
+      <description>Comment gâcher l'ambiance des premiers congés scolaires de l'année... A découvrir sur le blog « Une année au lycée ».</description>
+      <pubDate>Fri, 16 Oct 2015 21:34:44 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4791360/</guid>
+      <enclosure url="http://s2.lemde.fr/image/2015/10/16/644x322/4791362_3_bae8_mais-pourquoi-la-perspective-des-vacances-ne_c4d5a64b91a4f29e71bbed63386d2443.jpg" type="image/jpeg" length="31018"/>
+    </item>
     <item>
-    <title>                        Pourquoi la French Tech est de plus en plus présente au CES de Las Vegas</title>
-            <description>Plus de 130 entreprises françaises devraient être présentes lors de la prochaine édition du Consumer electronic show. Une reconnaissance de l’innovation et de la créativité hexagonales. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/05b/b7f406a98c653164f91ca9d75538b.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/pourquoi-la-french-tech-est-de-plus-en-plus-presente-au-ces-924759.html</link>
-    <pubDate>Fri, 23 Oct 2015 08:22:55 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/pourquoi-la-french-tech-est-de-plus-en-plus-presente-au-ces-924759.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/05b/b7f406a98c653164f91ca9d75538b.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://www.lemonde.fr/moocs-docs/article/2015/10/16/sept-sites-et-applications-pour-decouvrir-la-programmation-informatique_4791324_4468700.html</link>
+      <title>Sept sites et applications pour découvrir la programmation informatique</title>
+      <description>Alors que l’Europe célèbre la « Code Week », voici une sélection de cours, jeux et défis de logique permettant à tout un chacun de s’initier aux mystères du langage informatique.</description>
+      <pubDate>Fri, 16 Oct 2015 19:35:43 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4791324/</guid>
+      <enclosure url="http://s1.lemde.fr/image/2015/10/16/644x322/4791323_3_5690_le-jeu-codecombat-pour-s-initier-au-code_1799c7a10ac5d3ed2d7611c6eb23284f.png" type="image/png" length="201135"/>
+    </item>
     <item>
-    <title>                        Pourquoi le CES est devenu un événement incontournable au-delà de la planète high-tech</title>
-            <description>Depuis près de 50 ans, ce salon américain se veut le miroir de l’innovation technologique. Et chaque année, l'événement prend une nouvelle ampleur. L’édition 2016 devrait attirer plus de 165 000 visiteurs. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/51c/9c8dc9f35e5148ca68baead65632c.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/pourquoi-le-ces-est-devenu-incontournable-924174.html</link>
-    <pubDate>Wed, 21 Oct 2015 09:42:48 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/pourquoi-le-ces-est-devenu-incontournable-924174.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/51c/9c8dc9f35e5148ca68baead65632c.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://enseigner.blog.lemonde.fr/2015/10/13/quand-les-lyceens-desavouent-les-inspecteurs-pedagogiques/</link>
+      <title>Quand les lycéens désavouent les inspecteurs pédagogiques</title>
+      <description>Le prof et blogueur Claude Garcia est formel : quand on évalue les élèves de terminale avec les barèmes de notation du bac élaborés par les inspecteurs, ils sont décontenancés non par leur faiblesse, mais par leur envolée...</description>
+      <pubDate>Thu, 15 Oct 2015 12:07:13 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4790264/</guid>
+      <enclosure url="http://s2.lemde.fr/image/2015/06/17/644x322/4655678_3_8e00_epreuve-du-bac-en-2014_6484c6f2572c1a2ada212a927c3c404b.jpg" type="image/jpeg" length="24774"/>
+    </item>
     <item>
-    <title>Magic Leap lève un coin du voile sur son système de réalité augmentée</title>
-            <description>Le projet de la startup américaine met en œuvre un véritable ordinateur miniature avec son propre système d’exploitation. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/e96/4833827bb5d73fd27647c31859285.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/magic-leap-leve-un-coin-du-voile-sur-son-systeme-de-realite-augmentee-923983.html</link>
-    <pubDate>Wed, 21 Oct 2015 08:30:57 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/magic-leap-leve-un-coin-du-voile-sur-son-systeme-de-realite-augmentee-923983.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/e96/4833827bb5d73fd27647c31859285.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://www.lemonde.fr/campus/article/2015/10/14/le-monde-organise-son-10e-salon-des-grandes-ecoles-les-14-et-15-novembre-a-paris_4789353_4401467.html</link>
+      <title>« Le Monde » organise son 10e Salon des grandes écoles, les 14 et 15 novembre à Paris</title>
+      <description>Plus de 150 écoles de commerce, d’ingénieurs et établissements spécialisés et une quinzaine de conférences animées par des journalistes du « Monde » faciliteront l’orientation des lycéens et des étudiants.</description>
+      <pubDate>Wed, 14 Oct 2015 14:58:32 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4789353/</guid>
+      <enclosure url="http://s1.lemde.fr/image/2015/10/14/644x322/4789351_3_04bd_la-dixieme-edition-du-salon-des-grandes-e_f226482286e970f6adbb65e900a98c37.jpg" type="image/jpeg" length="43300"/>
+    </item>
     <item>
-    <title>Le CES Unveiled, c'est quoi ?</title>
-            <description>C'est comme un grand jour de répétition pour les start-up françaises de la high-tech, avant le départ pour le CES de Las Vegas. Celles qui seront du voyage se retrouvent à Paris, ce 21 octobre, pour échanger sur les dernières innovations made in France. Notre chaîne 01netTV est sur place ! <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/91e/54fc83f5bd7145e012d6d4bf77e4c.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/le-ces-unveiled-c-est-quoi-923946.html</link>
-    <pubDate>Wed, 21 Oct 2015 12:37:25 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/le-ces-unveiled-c-est-quoi-923946.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/91e/54fc83f5bd7145e012d6d4bf77e4c.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://www.lemonde.fr/bac-lycee/article/2015/10/13/seule-la-moitie-des-recales-au-bac-le-repassent_4788750_4401499.html</link>
+      <title>Seule la moitié des recalés au bac le repassent</title>
+      <description>Une étude du ministère de l’éducation nationale montre que les abandons sont particulièrement nombreux après un échec au bac pro.</description>
+      <pubDate>Tue, 13 Oct 2015 18:10:32 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4788750/</guid>
+      <enclosure url="http://s2.lemde.fr/image/2015/10/13/644x322/4788748_3_36af_des-lyceens-regardent-les-resultats-du-bac-le-7_9bd7b1ca23877962f2f299a403e06942.jpg" type="image/jpeg" length="29750"/>
+    </item>
     <item>
-    <title>
-                        Et si une simple caméra à bord d’une voiture suffisait pour la rendre autonome
-                    </title>
-            <description>La technologie Valeo Cruise 4 U relève un challenge de taille puisque cette technologie permet au véhicule équipé d’une simple caméra et d’un Lidar de rouler seul sur autoroute. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/c7a/eed34ef949f7a34ae0390c9675bdb.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/et-une-simple-camera-a-bord-d-une-voiture-suffisait-pour-la-conduite-autonome-922631.html</link>
-    <pubDate>Sat, 17 Oct 2015 10:32:20 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/et-une-simple-camera-a-bord-d-une-voiture-suffisait-pour-la-conduite-autonome-922631.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/c7a/eed34ef949f7a34ae0390c9675bdb.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://www.lemonde.fr/etudes-superieures/article/2015/10/09/la-prepa-gratuite-aux-ecoles-de-journalisme-recrute_4786508_4468191.html</link>
+      <title>La prépa gratuite aux écoles de journalisme recrute</title>
+      <description>Les étudiants boursiers ou équivalents ont jusqu’au 18 octobre pour candidater auprès de l’association La Chance aux concours, désormais active à Paris, Clermont-Ferrand et Toulouse.</description>
+      <pubDate>Fri, 09 Oct 2015 16:46:28 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4786508/</guid>
+      <enclosure url="http://s1.lemde.fr/image/2015/10/09/644x322/4786506_3_c2e5_le-logo-de-la-cac-association-qui-prepare_b5504c6c9fd2751850908375db53283f.png" type="image/png" length="37586"/>
+    </item>
     <item>
-    <title>
-                        Tesla Model S : elle conduit désormais (presque) toute seule </title>
-            <description>La mise à jour 7.0 de la Tesla Model S est déployée dès maintenant aux Etats-Unis et arrive la semaine prochaine en Europe. Celle-ci entérine les fonctions du pack Autopilot. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/b76/cb8be79356de1062f55c412e5b9cb.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/tesla-model-s-elle-conduit-desormais-presque-toute-seule-921680.html</link>
-    <pubDate>Fri, 16 Oct 2015 10:49:40 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/tesla-model-s-elle-conduit-desormais-presque-toute-seule-921680.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/b76/cb8be79356de1062f55c412e5b9cb.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://www.lemonde.fr/etudes-superieures/article/2015/10/08/l-austerite-tue-l-universite-denoncent-les-manifestants_4785828_4468191.html</link>
+      <title>« L’austérité tue l’université », dénoncent les manifestants</title>
+      <description>Etudiants, lycéens et personnels de l’enseignement ont manifesté côte à côte, en tête de cortège, lors de la mobilisation interprofessionnelle contre « la politique d’austérité » du gouvernement, jeudi à Paris.</description>
+      <pubDate>Thu, 08 Oct 2015 19:04:19 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4785828/</guid>
+      <enclosure url="http://s2.lemde.fr/image/2015/10/08/644x322/4785827_3_10b4_les-etudiants-lors-de-la-manifestation_2b432625aeda2a344c27b1363793af0e.jpg" type="image/jpeg" length="53652"/>
+    </item>
     <item>
-    <title>
-                        Demain, les images Jpeg pourraient être protégées contre la copie
-                    </title>
-            <description>Le comité qui a apporté le format jpeg au monde contemple l’idée de l’assujettir à des DRM. Ces verrous numériques serviraient à protéger la vie privée des utilisateurs et la propriété intellectuelle des ayant-droits… Tout en restreignant énormément l’utilisation de ces photos. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/e05/835595c9ad9215a451cbea1df457f.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/demain-les-images-jpeg-pourraient-etre-verrouilles-numeriquement-pour-votre-bien-922679.html</link>
-    <pubDate>Thu, 15 Oct 2015 07:57:38 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/demain-les-images-jpeg-pourraient-etre-verrouilles-numeriquement-pour-votre-bien-922679.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/e05/835595c9ad9215a451cbea1df457f.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://uneanneeaulycee.blog.lemonde.fr/2015/10/07/le-lycee-trop-cher/</link>
+      <title>Lycéens, aidez l'Etat à économiser !</title>
+      <description>Le lycée coûte trop cher ? Elèves, voici une façon simple et efficace pour contribuer à réduire les coûts. A lire sur le blog de Fabrice Erre.</description>
+      <pubDate>Thu, 08 Oct 2015 14:55:58 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4785528/</guid>
+      <enclosure url="http://s1.lemde.fr/image/2015/10/08/644x322/4785542_3_ff59_voici-comment-faire-des-economies-au-lycee_03432163cd4361f5d8faad583bac125f.png" type="image/png" length="257961"/>
+    </item>
     <item>
-    <title>
-                        Samsung pourrait intégrer une technologie similaire au 3D Touch d'Apple au Galaxy S7
-                    </title>
-            <description>Le prochain smartphone haut de gamme de Samsung pourrait intégrer une technologie proche du 3D Touch d'Apple développée par Synaptics. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/d6f/2e7d2a0a327c74f212b5f22b1ca98.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/samsung-pourrait-integrer-une-technologie-3d-touch-like-au-galaxy-s7-922375.html</link>
-    <pubDate>Wed, 14 Oct 2015 07:58:27 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/samsung-pourrait-integrer-une-technologie-3d-touch-like-au-galaxy-s7-922375.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/d6f/2e7d2a0a327c74f212b5f22b1ca98.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://www.lemonde.fr/campus/article/2015/10/07/assistant-ingenieur-un-nouveau-diplome-pour-les-bacheliers-pro_4784229_4401467.html</link>
+      <title>Assistant ingénieur : un nouveau diplôme pour les bacheliers pro</title>
+      <description>A la rentrée 2016, des écoles d’ingénieurs devraient proposer une nouvelle formation diplômante à bac +3.</description>
+      <pubDate>Wed, 07 Oct 2015 12:10:36 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4784229/</guid>
+      <enclosure url="http://s2.lemde.fr/image/2015/10/07/644x322/4784228_3_ffec_l-ecole-nationale-superieure-des-arts-et-me_a96b6cf42160f82cb80adf1a0d473656.jpg" type="image/jpeg" length="46948"/>
+    </item>
     <item>
-    <title>SanDisk et HP s’associent pour créer une mémoire 1000 fois plus rapide</title>
-            <description>Le nouveau type de mémoire devrait remplacer la mémoire flash dans les SSD, mais aussi la mémoire vive DRAM des ordinateurs. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/dd6/0911412200c77266061a00e8e8e6c.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/sandisk-et-hp-s-associent-pour-creer-une-memoire-1000-fois-plus-rapide-921765.html</link>
-    <pubDate>Tue, 13 Oct 2015 04:50:51 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/sandisk-et-hp-s-associent-pour-creer-une-memoire-1000-fois-plus-rapide-921765.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/dd6/0911412200c77266061a00e8e8e6c.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://www.lemonde.fr/campus/article/2015/10/07/le-nouveaux-cycle-pluridiciplinaire-de-psl-seduit-ses-etudiants-curieux-de-tout-et-d-apprendre_4784182_4401467.html</link>
+      <title>Entre fac et prépa, un nouveau cursus pour étudiants curieux de tout</title>
+      <description>Ouvert en 2012, le diplôme pluridisciplinaire en trois ans de Paris Sciences et Lettres (PSL) est désormais reconnu comme une licence. Cette formation d’excellence, ouverte et large, permet une spécialisation progressive, et ouvre déjà de nombreuses portes</description>
+      <pubDate>Wed, 07 Oct 2015 11:43:21 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4784182/</guid>
+      <enclosure url="http://s1.lemde.fr/image/2015/10/07/644x322/4784181_3_4e19_en-premiere-annee-l-essentiel-des-cours-de-psl_97e9c7960ba97ff4f1d9bb5c4bca2a4f.jpg" type="image/jpeg" length="59514"/>
+    </item>
     <item>
-    <title>Google simplifie le web mobile pour le rendre plus rapide</title>
-            <description>Le géant du web propose aux éditeurs de presse un HTML version allégée où le Javascript est largement banni. La promesse : un gain de performance de 15 à 85 % au niveau du téléchargement. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/a9d/cf009308d58d95f66b7b7b77c76ed.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/google-simplifie-le-web-mobile-pour-le-rendre-plus-rapide-920933.html</link>
-    <pubDate>Thu, 08 Oct 2015 07:27:47 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/google-simplifie-le-web-mobile-pour-le-rendre-plus-rapide-920933.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/a9d/cf009308d58d95f66b7b7b77c76ed.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://www.lemonde.fr/campus/article/2015/10/06/revivez-une-annee-au-lycee-en-sept-planches-de-bd_4783761_4401467.html</link>
+      <title>Perles d’élèves et vie scolaire... « Une année au lycée » en BD</title>
+      <description>Le professeur et blogueur BD Fabrice Erre, qui publie un album issu de son journal de bord sur Lemonde.fr, commente les temps forts de l’année écoulée.</description>
+      <pubDate>Tue, 06 Oct 2015 19:10:33 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4783761/</guid>
+      <enclosure url="http://s2.lemde.fr/image/2015/10/06/644x322/4783756_3_2254_sequence-emotion_ca640299da4825ad379b9399c3cd6577.jpg" type="image/jpeg" length="84071"/>
+    </item>
     <item>
-    <title>
-                        Microsoft veut augmenter l’autonomie de nos appareils en combinant plusieurs batteries
-                    </title>
-            <description>Des chercheurs du géant de Redmond ont mis au point un système qui associe une solution logicielle et différents types de batteries dans un appareil pour optimiser performances et autonomie… <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/33f/8cd33c10d5846865ad8c119999cdc.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/microsoft-veut-augmenter-l-autonomie-de-nos-appareils-en-combinant-differentes-batteries-920692.html</link>
-    <pubDate>Thu, 08 Oct 2015 09:51:01 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/microsoft-veut-augmenter-l-autonomie-de-nos-appareils-en-combinant-differentes-batteries-920692.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/33f/8cd33c10d5846865ad8c119999cdc.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://www.lemonde.fr/campus/article/2015/10/05/etudes-paramedicales-faire-une-prepa-ou-pas_4782419_4401467.html</link>
+      <title>Études paramédicales : faire une prépa ou pas ?</title>
+      <description>Selon les professionnels du milieu, seuls les meilleurs bacheliers peuvent être reçus en institut de formation sans faire de classe préparatoire.</description>
+      <pubDate>Mon, 05 Oct 2015 08:54:43 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4782419/</guid>
+      <enclosure url="http://s1.lemde.fr/image/2015/10/05/644x322/4782418_3_e614_une-infirmiere-installe-une-perfusion-a-une-p_714c93ef535df846528e4e37109f6229.jpg" type="image/jpeg" length="52230"/>
+    </item>
     <item>
-    <title>On a testé la meilleure voiture autonome française</title>
-            <description>Le véhicule autonome de Vedecom nous a épaté. Nous avons parcouru 7 km à son bord, au milieu de la circulation de Bordeaux, sans aucune intervention du conducteur. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/d0d/9274cd1ca56512cd1274a34fdcd88.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/on-a-teste-la-meilleure-voiture-autonome-francaise-920569.html</link>
-    <pubDate>Wed, 07 Oct 2015 09:58:24 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/on-a-teste-la-meilleure-voiture-autonome-francaise-920569.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/d0d/9274cd1ca56512cd1274a34fdcd88.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://www.lemonde.fr/vie-etudiante/article/2015/09/30/a-saint-denis-une-association-d-anciens-eleves-veut-briser-le-fatalisme-des-lyceens_4778730_4468406.html</link>
+      <title>A Saint-Denis, une association d’anciens élèves veut briser le fatalisme des lycéens</title>
+      <description>Réussir ses études quand on vient de banlieue n’est pas impossible : c’est ce que six étudiants veulent montrer, en aidant les élèves qui leur ont succédé au lycée Suger.</description>
+      <pubDate>Wed, 30 Sep 2015 21:01:31 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4778730/</guid>
+      <enclosure url="http://s2.lemde.fr/image/2015/09/30/644x322/4778729_3_40fd_myriam-neerashaa-david-yannis-et-thomas-ont_cbed4f1052db2c5df182ad9d15ffe3d7.jpg" type="image/jpeg" length="41057"/>
+    </item>
     <item>
-    <title>
-                        IBM vient peut-être de sauver la Loi de Moore en révolutionnant les nanotubes de carbone
-                    </title>
-            <description>Des chercheurs de Big Blue ont réussi à résoudre un des trois problèmes qui empêchent l’adoption de ce matériau « miracle » pour fabriquer des puces qui prendront place dans nos futurs appareils électroniques. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/2c4/b0240e6697a79f6b733b9257d28c6.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/ibm-vient-peut-etre-de-sauver-la-loi-de-moore-en-revolutionnant-les-nanotubes-de-carbone-919475.html</link>
-    <pubDate>Fri, 02 Oct 2015 09:55:26 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/ibm-vient-peut-etre-de-sauver-la-loi-de-moore-en-revolutionnant-les-nanotubes-de-carbone-919475.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/2c4/b0240e6697a79f6b733b9257d28c6.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://www.lemonde.fr/education/article/2015/09/24/sur-le-marche-l-emploi-le-diplome-protege-un-peu-moins-qu-avant_4769240_1473685.html</link>
+      <title>Sur le marché de l’emploi, le diplôme protège un peu moins qu’avant</title>
+      <description>En 2013, 13 % des diplômés du supérieur étaient au chômage trois ans après leur sortie. Les bac + 5 s’en sortent mieux.</description>
+      <pubDate>Thu, 24 Sep 2015 06:53:57 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4769240/</guid>
+      <enclosure url="http://s1.lemde.fr/image/2015/09/24/644x322/4769239_3_76a9_une-etudiante-a-la-faculte-de-picardie-ju_491011c2bea7cf533decc189d8212181.jpg" type="image/jpeg" length="55290"/>
+    </item>
     <item>
-    <title>
-                        Audi A4, BMW Série 7 et Renault Mégane 4 : les meilleures voitures connectées 2015
-                    </title>
-            <description>Les trois nouveaux modèles d'Audi, de BMW et de Renault, présentés à l'IAA de Francfort, sont élus les Voitures connectées de 2015… un prix décerné, chaque année, par 01net.com. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/c39/f2dd55f11b3ec444e9c1b369c839c.png"/>]]></description>
-        <link>http://www.01net.com/actualites/audi-a4-bmw-serie-7-et-renault-megane-4-les-meilleures-voitures-connectees-2015-919129.html</link>
-    <pubDate>Fri, 02 Oct 2015 09:55:27 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/audi-a4-bmw-serie-7-et-renault-megane-4-les-meilleures-voitures-connectees-2015-919129.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/c39/f2dd55f11b3ec444e9c1b369c839c.png"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://www.lemonde.fr/etudes-superieures/article/2015/09/21/ma-salle-de-cours-va-craquer-le-tumblr-qui-denonce-la-surpopulation-a-l-universite_4766014_4468191.html</link>
+      <title>« Ma salle de cours va craquer », le Tumblr qui dénonce la surpopulation à l’université</title>
+      <description>Sur ce blog, les étudiants et les lycéens sont invités à poster les photos de leurs salles de cours bondées.</description>
+      <pubDate>Mon, 21 Sep 2015 18:16:53 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4766014/</guid>
+      <enclosure url="http://s2.lemde.fr/image/2015/09/21/644x322/4766013_3_f27b_une-salle-de-cours-de-l-universite-de_2dacf159f6a89479b0cd9b522f068a77.jpg" type="image/jpeg" length="53976"/>
+    </item>
     <item>
-    <title>Quelles seront les technologies de la voiture de demain ? </title>
-            <description>Scala, Mobius, Sightstream, 360 vue 3D, le nom de ces technologies Valeo ne vous évoquent peut-être pas grand-chose et pourtant elles sont aujourd’hui au cœur des développements de la voiture du futur. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/564/f8c8339afc879d4c91fe1f1ef87d8.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/valeo-un-equipementier-francais-a-la-pointe-sur-la-voiture-autonome-917383.html</link>
-    <pubDate>Mon, 28 Sep 2015 12:41:45 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/valeo-un-equipementier-francais-a-la-pointe-sur-la-voiture-autonome-917383.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/564/f8c8339afc879d4c91fe1f1ef87d8.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://enseigner.blog.lemonde.fr/2015/09/18/le-medef-veut-transformer-lenseignement-de-leconomie-au-lycee/</link>
+      <title>Le Medef veut-il transformer l’enseignement de l’économie au lycée ?</title>
+      <description>Le professeur de SES Claude Garcia réagit, sur son blog, à la publication par un think-tank patronal d'une brochure destinée aux lycéens critiquant le Smic.</description>
+      <pubDate>Fri, 18 Sep 2015 17:48:48 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4762331/</guid>
+      <enclosure url="http://s1.lemde.fr/image/2015/09/18/644x322/4762787_3_516f_la-une-de-la-brochure-pedagogique-que_bf51d01a1326ad7d82080b86f29df366.jpg" type="image/jpeg" length="47911"/>
+    </item>
     <item>
-    <title>
-                        Avec Brotli, Google veut encore plus compresser le Web
-                    </title>
-            <description>Le géant du web présente un algorithme qui serait nettement plus performant pour compresser les données. Les applications sont nombreuses, dans le stockage comme dans le web. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/224/e3d3afef8de2ac662e8c7f64be4c4.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/avec-brotli-google-veut-encore-plus-compresser-le-web-917007.html</link>
-    <pubDate>Thu, 24 Sep 2015 10:48:14 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/avec-brotli-google-veut-encore-plus-compresser-le-web-917007.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/224/e3d3afef8de2ac662e8c7f64be4c4.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://www.lemonde.fr/universites/article/2015/09/14/des-centaines-de-bacheliers-n-ont-toujours-pas-d-universite-pour-la-rentree_4756527_4468207.html</link>
+      <title>Des centaines de bacheliers n’ont toujours pas d’université pour la rentrée</title>
+      <description>Malgré ses onze vœux d’orientation, Léonna-Deleine n’a toujours pas d’affectation universitaire, comme de nombreux autres bacheliers de la promo 2015.</description>
+      <pubDate>Mon, 14 Sep 2015 12:51:26 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4756527/</guid>
+      <enclosure url="http://s2.lemde.fr/image/2015/09/14/644x322/4756526_3_6f74_sur-les-617-000-bacheliers-encore-plusieurs_5f1e92d865f7189584fbfb18c4ca70a1.jpg" type="image/jpeg" length="24058"/>
+    </item>
     <item>
-    <title>Apple peut-il vraiment construire sa voiture autonome d’ici 2019 ?
-                    </title>
-            <description>Simple mythe ou réalité prochaine, Apple pourrait bien commercialiser sa voiture électrique - et autonome ? - d’ici trois ans. Si le sujet est régulièrement mis sur le tapis, rien ne semble s’opposer à ce que le géant américain puisse mener son projet à terme… sous certaines conditions. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/521/ded7e2375d42d93341806acacfeef.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/apple-peut-il-vraiment-construire-sa-voiture-autonome-d-ici-2019-916822.html</link>
-    <pubDate>Wed, 23 Sep 2015 07:24:28 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/apple-peut-il-vraiment-construire-sa-voiture-autonome-d-ici-2019-916822.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/521/ded7e2375d42d93341806acacfeef.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
+      <link>http://www.lemonde.fr/campus/article/2015/09/10/florine-platon-et-le-lycee-a-la-rescousse-des-migrants_4751615_4401467.html</link>
+      <title>Florine, Platon et le lycée à la rescousse des migrants</title>
+      <description>Un groupe d’élèves du lycée Michelet de Vanves s’est mobilisé pour monter une opération de soutien aux réfugiés.</description>
+      <pubDate>Thu, 10 Sep 2015 13:55:51 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4751615/</guid>
+      <enclosure url="http://s1.lemde.fr/image/2015/09/10/644x322/4751614_3_ce57_florine-hausfater-coordinatrice-d-une-action_c45fd450c24c7b500932fd85c13a072c.jpg" type="image/jpeg" length="43505"/>
+    </item>
     <item>
-    <title>Salon de Francfort : Toyota Mirai, la voiture à hydrogène débarque en Europe
-                    </title>
-            <description>La voiture à pile à combustible sera présente sur le salon de l’auto IAA à Francfort en septembre prochain. Quelques exemplaires seront d’ailleurs livrés dans les prochaines semaines en Allemagne. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/3fe/9cf55d7d9adef6a840e6c91b52bd0.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/salon-de-francfort-toyota-mirai-la-voiture-a-hydrogene-debarque-en-europe-909632.html</link>
-    <pubDate>Fri, 18 Sep 2015 03:18:45 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/salon-de-francfort-toyota-mirai-la-voiture-a-hydrogene-debarque-en-europe-909632.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/3fe/9cf55d7d9adef6a840e6c91b52bd0.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
-    <item>
-    <title>Salon de Francfort : Audi l'e-tron quattro, le SUV électrique qui offrirait 500 km d’autonomie</title>
-            <description>La marque aux anneaux dévoile petit à petit ses modèles phares qui seront présentés au salon de Francfort en septembre prochain. Le concept Audi e-tron quattro serait un SUV électrique sans compromis. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/d46/a038429612c19a902ba9a7d9a74dd.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/audi-e-tron-quattro-le-suv-electrique-qui-offrirait-500-km-d-autonomie-908653.html</link>
-    <pubDate>Fri, 18 Sep 2015 03:00:58 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/audi-e-tron-quattro-le-suv-electrique-qui-offrirait-500-km-d-autonomie-908653.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/d46/a038429612c19a902ba9a7d9a74dd.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
-    <item>
-    <title>Disney veut créer l’Internet des jouets grâce au Li-Fi</title>
-            <description>Le centre R&amp;D du géant américain du divertissement a développé une technologie de communication par la lumière à l’aide de microcontrôleurs Linux intégrés dans des ampoules LED du commerce. Mais le débit est encore faible : 1 kbit/s. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/16f/c83d8149f939cde850ec0cc5041e7.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/disney-veut-creer-l-internet-des-jouets-grace-au-li-fi-915546.html</link>
-    <pubDate>Thu, 17 Sep 2015 03:24:57 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/disney-veut-creer-l-internet-des-jouets-grace-au-li-fi-915546.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/16f/c83d8149f939cde850ec0cc5041e7.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
-    <item>
-    <title>Qualcomm dévoile une technologie capable de recharger votre smartphone en 35 minutes</title>
-            <description>Recharger un smartphone ou une tablette est devenu un geste quotidien et parfois agaçant. Qualcomm propose une technologie pour réduire le temps de charge. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/30a/72fcd58a2c3c0499c2bd260dada30.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/batterie-la-technologie-quick-charge-3-0-accelere-le-chargement-de-votre-smartphone-914965.html</link>
-    <pubDate>Tue, 15 Sep 2015 07:35:30 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/batterie-la-technologie-quick-charge-3-0-accelere-le-chargement-de-votre-smartphone-914965.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/30a/72fcd58a2c3c0499c2bd260dada30.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
-    <item>
-    <title>Porsche dévoile Mission E, sa «Tesla killer» </title>
-            <description>A Francfort, la marque automobile a présenté Mission E, une berline 100 % électrique avec à la clé un temps de charge particulièrement bas, grâce à l’utilisation d’une technologie haut tension. Malheureusement, il ne s’agit pour l’instant que d’une voiture concept. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/863/869c76896c3b140a1f056c0f3bf84.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/porsche-presentebrson-tesla-killer-914963.html</link>
-    <pubDate>Fri, 18 Sep 2015 03:16:30 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/porsche-presentebrson-tesla-killer-914963.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/863/869c76896c3b140a1f056c0f3bf84.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
-    <item>
-    <title>Google embauche un ancien de Huyndai pour booster ses voitures autonomes</title>
-            <description>John Krafcik est un vétéran de l’industrie automobile. Il vient d’être propulsé au poste de directeur général du projet de véhicule sans conducteur. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/56c/8c2b59349e0faaa4f16fce74de33c.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/google-embauche-un-ancien-de-huyndai-pour-booster-ses-voitures-autonomes-914765.html</link>
-    <pubDate>Mon, 14 Sep 2015 04:32:05 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/google-embauche-un-ancien-de-huyndai-pour-booster-ses-voitures-autonomes-914765.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/56c/8c2b59349e0faaa4f16fce74de33c.jpg"
-               type="image/jpg"
-               length="176783"
-    />
-
-</item>
-    <item>
-    <title>Salon de Francfort : Quelle sera la voiture connectée de l'année ?</title>
-            <description>Pour la deuxième année consécutive, le jury 01net.com va élire la voiture connectée de l'année. Cette fois, notre équipe va parcourir les allées du salon de Francfort. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/9e1/35d6fa61d104b0f0dd75d022b76a8.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/salon-de-francfort-quelle-sera-la-voiture-connectee-de-l-annee-914657.html</link>
-    <pubDate>Mon, 14 Sep 2015 11:57:47 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/salon-de-francfort-quelle-sera-la-voiture-connectee-de-l-annee-914657.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/9e1/35d6fa61d104b0f0dd75d022b76a8.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
-    <item>
-    <title>Bientôt, les smartphones auront deux fois plus de mémoire</title>
-            <description>Le fabricant sud-coréen Samsung a commencé le production de composants qui permettront d’avoir jusqu’à 6 Go de mémoire contre 3 Go pour la génération précédente. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/922/6fae07be834db6828435b6802a5c0.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/bientot-les-smartphones-auront-deux-fois-plus-de-memoire-913533.html</link>
-    <pubDate>Wed, 09 Sep 2015 09:26:55 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/bientot-les-smartphones-auront-deux-fois-plus-de-memoire-913533.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/922/6fae07be834db6828435b6802a5c0.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
-    <item>
-    <title>
-                        Canon développe un boîtier reflex de 120 Mpix et se prépare à la 8K</title>
-            <description>Canon gonfle ses muscles et promet un boîtier reflex EOS à la définition record de 120 Mpix et du matériel 8K. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/ce3/901c5102158a9e7b257a56d02195d.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/canon-developpe-un-boitier-reflex-de-120-mpix-et-se-prepare-a-la-8k-913096.html</link>
-    <pubDate>Wed, 16 Sep 2015 11:30:10 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/canon-developpe-un-boitier-reflex-de-120-mpix-et-se-prepare-a-la-8k-913096.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/ce3/901c5102158a9e7b257a56d02195d.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
-    <item>
-    <title>
- 250 Mpix : à quoi servira l'incroyable capteur de Canon ?</title>
-            <description>La définition de 250 Mpix impressionne moins que les capacités du processeur, capable de traiter 1,25 milliard de pixels par seconde. <![CDATA[ <br/><br/> <img src="http://img.bfmtv.com/c/150/100/956/5fd39b52ba11fa6d5bd77b3bf40cf.jpg"/>]]></description>
-        <link>http://www.01net.com/actualites/photo-canon-annonce-un-capteur-de-250-mpix-912910.html</link>
-    <pubDate>Mon, 07 Sep 2015 07:43:33 +0200</pubDate>
-    <guid isPermaLink="false">http://www.01net.com/actualites/photo-canon-annonce-un-capteur-de-250-mpix-912910.html</guid>
-        <enclosure url="http://img.bfmtv.com/i/0/0/956/5fd39b52ba11fa6d5bd77b3bf40cf.jpg"
-               type="image/jpg"
-               length="0"
-    />
-
-</item>
-    </channel>
+      <link>http://uneanneeaulycee.blog.lemonde.fr/2015/09/06/lenjeu-du-demarrage/</link>
+      <title>Bienvenue dans le grand huit de l'année du bac !</title>
+      <description>Pour le prof « Une année au lycée », tout l'enjeu est de bien démarrer à la rentrée.</description>
+      <pubDate>Mon, 07 Sep 2015 10:24:46 +0200</pubDate>
+      <guid isPermaLink="true">http://www.lemonde.fr/tiny/4747873/</guid>
+      <enclosure url="http://s2.lemde.fr/image/2015/09/07/644x322/4747883_3_5792_bienvenue-dans-le-grand-huit-de-l-annee-du-bac_19c4fa4feef9e1a28b33bdc315f55736.png" type="image/png" length="281607"/>
+    </item>
+  </channel>
 </rss>
