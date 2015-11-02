@@ -18,7 +18,7 @@ class DAO {
         }
 
         if (!is_dir('../model/images')) {
-            mkdir('images', 0777, true);
+            mkdir('../model/images', 0777, true);
         }
     }
 
@@ -44,14 +44,14 @@ class DAO {
         try {
             $v_rss = $this->db->query("SELECT * FROM RSS")->fetchAll(PDO::FETCH_CLASS, 'RSS');
             if (!empty($v_rss)) {
+		$v_rssn = array();
                 foreach ($v_rss as $k => $rss) {
                     $rss->setNouvelles($this->getNouvellesFromId($rss->getId()));
                     // On indice correctement le tableau ($v_rss['id'])
-                    $v_rss[$rss->getId()] = $rss;
-                    unset($v_rss[$k]);
+                    $v_rssn[$rss->getId()] = $rss;
                 }
 
-                return $v_rss;
+                return $v_rssn;
             }
         } catch (PDOException $ex) {
             die('PDOException: ' . $ex->getMessage());

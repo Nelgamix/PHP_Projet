@@ -43,11 +43,11 @@ class Nouvelle {
         $nodeEnclosure = $item->getElementsByTagName('enclosure');
         
         $this->titre  =       $title->item(0)->textContent;
-        $this->description =  $description->item(0)->textContent;
+        $this->description =  trim(preg_replace('/ +/', ' ', preg_replace('/[^A-Za-z0-9 ]/', ' ', urldecode(html_entity_decode(strip_tags($description->item(0)->textContent))))));
         $this->date =         $pubDate->item(0)->textContent;
         $this->url =          $link->item(0)->textContent;
         if ($nodeEnclosure != NULL && $nodeEnclosure->item(0) != NULL)
-            $this->image = $nodeEnclosure->item(0)->attributes->getNamedItem('url')->nodeValue;
+	        $this->image = $nodeEnclosure->item(0)->attributes->getNamedItem('url')->nodeValue;
         else
             $this->image = "default";
     }

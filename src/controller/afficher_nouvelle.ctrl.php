@@ -5,7 +5,7 @@ require_once('../model/DAO.class.php');
 $nouvelle = $dao->getNouvelleFromId($id);
 
 if ($nouvelle == NULL) {
-    die("La nouvelle spécifiée n'existe pas");
+    die("La nouvelle spÃ©cifiÃ©e n'existe pas");
 }
 
 $titre = $nouvelle->getTitre();

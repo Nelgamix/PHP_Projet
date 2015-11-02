@@ -17,6 +17,7 @@ body {
     padding-left: 33px;
     padding-bottom: 33px;
 }
+
 #images_display {
     width: 1260px;
     margin: auto;
@@ -51,7 +52,7 @@ body {
 }
 
 #textcontent {
-    width: 54%;
+    width: 48%;
     margin-left: 20px;
     vertical-align: top;
 }
@@ -98,7 +99,7 @@ fieldset {
 }
 
 input[type="number"] {
-    width: 50px;
+    width: 60px;
 }
 
 footer {

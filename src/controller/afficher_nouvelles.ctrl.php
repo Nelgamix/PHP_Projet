@@ -16,7 +16,7 @@ if ($id == 0) {
 }
 
 if (empty($v_rss)) {
-    die("Le rss spécifié n'existe pas");
+    die("Le rss spÃ©cifiÃ© n'existe pas");
 }
 
 include('../view/afficher_nouvelles.view.php');

@@ -77,7 +77,11 @@
                             <input type="checkbox" name="showFluxGeneraux" <?= $showFluxGeneraux ?>/> Afficher les flux généraux à l'application<br />
                             <input type="number" name="resultByFlux" step="5" min="10" max="250" value="<?= $resultByFlux ?>" /> Nombre de résultats max par flux<br />
                         </p>
-                        <p><input type="submit" value="Valider" name="valider" style="float: right" /></p>
+                        <div class="col-sm-offset-2 col-sm-2">
+                            <button class="btn btn-default" type="submit" value="Valider" name="valider">Valider</button>
+                        </div>
+
+
                     </div>
                 </form>
             </fieldset>
