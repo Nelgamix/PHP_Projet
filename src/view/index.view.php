@@ -26,7 +26,13 @@
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="#">Home</a></li>
                             <li><a href="parametres.ctrl.php">Paramètres</a></li>
-                            <li><a href="backoffice.ctrl.php">Backoffice (debug)</a></li>
+                            <?php
+                                if ($logged && $isAdmin):
+                            ?>
+                                <li><a href="backoffice.ctrl.php">Backoffice</a></li>
+                            <?php
+                                endif;
+                            ?>
                         </ul>
                         <?php
                             if ($logged):

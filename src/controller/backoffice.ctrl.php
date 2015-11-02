@@ -1,6 +1,10 @@
 <?php
 require_once('../model/DAO.class.php');
 require_once('../../kint/Kint.class.php');
+require_once('session.ctrl.php');
+
+if ($_SESSION['isAdmin'] != true)
+    die('Accès interdit.');
 
 $titrePrincipal = "Back-office";
 
@@ -93,6 +97,41 @@ if (isset($_GET['action'])) {
                 "Le RSS ($url) n'a pas été créé, vérifiez si il n'existe pas déjà, et si l'url est correcte.";
             $alertType = "alert-warning";
         }
+    } else if ($_GET['action'] == "deleteUser" || $_GET['action'] == "deleteAdmin" || $_GET['action'] == "addAdmin") {
+        if (isset($_GET['user']) && $_GET['user'] != "") {
+            $userk = $_GET['user'];
+            if ($_GET['action'] == "deleteUser") {
+                if ($dao->supprimerUtilisateur($userk)) {
+                    $message = "<strong>L'utilisateur a été supprimé.</strong> " .
+                        "L'utilisateur $userk a bien été supprimé de la base de données.";
+                    $alertType = "alert-success";
+                } else {
+                    $message = "<strong>L'utilisateur n'a pas été supprimé.</strong> " .
+                        "L'utilisateur $userk n'a pas été supprimé de la base de données.";
+                    $alertType = "alert-warning";
+                }
+            } else if ($_GET['action'] == "deleteAdmin") {
+                if ($dao->supprimerAdmin($userk)) {
+                    $message = "<strong>L'utilisateur a bien été supprimé des admins.</strong> " .
+                        "L'utilisateur $userk a bien été supprimé des admins.";
+                    $alertType = "alert-success";
+                } else {
+                    $message = "<strong>L'utilisateur n'a pas été supprimé des admins.</strong> " .
+                        "L'utilisateur $userk n'a pas été supprimé des admins. Vérifiez qu'il n'était pas déjà membre normal.";
+                    $alertType = "alert-warning";
+                }
+            } else if ($_GET['action'] == "addAdmin") {
+                if ($dao->promouvoirAdmin($userk)) {
+                    $message = "<strong>L'utilisateur a été promu admin.</strong> " .
+                        "L'utilisateur $userk a bien été promu admin sur le site.";
+                    $alertType = "alert-success";
+                } else {
+                    $message = "<strong>L'utilisateur n'a pas été promu.</strong> " .
+                        "L'utilisateur $userk n'a pas été promu admin. Vérifiez qu'il n'était pas déjà admin.";
+                    $alertType = "alert-warning";
+                }
+            }
+        }
     } else {
         $message = "<strong>Impossible de récupérer vos paramètres.</strong> " .
             "Vos paramètres n'ont pas été compris (action {$_GET['action']}). Veuillez les vérifier.";
@@ -101,6 +140,20 @@ if (isset($_GET['action'])) {
 }
 
 $v_rss = $dao->constructAllRSS();
+$users = $dao->getAllUsers();
+if (isset($users) && !empty($users)) {
+    foreach ($users as $k => $userk) {
+        if ($k == $user) {
+            unset($users[$k]);
+        } else {
+            if ($userk->isAdmin()) {
+                $userk->adminBtn = "<a href='backoffice.ctrl.php?action=deleteAdmin&user={$userk->getLogin()}' class='btn btn-xs btn-warning' title='Supprimer de l" . "'" . "administration>Supprimer admin</a>";
+            } else {
+                $userk->adminBtn = "<a href='backoffice.ctrl.php?action=addAdmin&user={$userk->getLogin()}' class='btn btn-xs btn-primary' title='Mettre admin'>Promouvoir admin</a>";
+            }
+        }
+    }
+}
 
 $data['nbNouvelles'] = 0;
 

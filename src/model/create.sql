@@ -20,7 +20,8 @@ CREATE TABLE nouvelle (
 CREATE TABLE utilisateur (
 	
 	login varchar(80) primary key,
-	mp varchar(8)
+	mp varchar(8),
+	isAdmin boolean
 );
 
 CREATE TABLE abonnement (
@@ -31,3 +32,5 @@ CREATE TABLE abonnement (
 	categorie varchar(40),
 	primary key (utilisateur_login,RSS_id)
 );
+
+INSERT INTO utilisateur VALUES ('admin', 'admin', 'true');

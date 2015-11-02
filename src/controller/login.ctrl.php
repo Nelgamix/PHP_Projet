@@ -15,7 +15,7 @@ if (isset($_POST['connect'])) {
     print('Trying to connect');
 
     if (!isset($_POST['user']) || $_POST['user'] == '' || !isset($_POST['password']) || $_POST['password'] == '') {
-        die("Impossible de récupérer les bons paramètres\n");
+        die("Impossible de rï¿½cupï¿½rer les bons paramï¿½tres\n");
     }
 
     $user = $_POST['user'];
@@ -25,6 +25,7 @@ if (isset($_POST['connect'])) {
 
     if ($log) {
         $_SESSION['user'] = $user;
+        $_SESSION['isAdmin'] = $dao->isAdmin($user);
     }
 
     if (isset($_SESSION['user'])) {
@@ -35,12 +36,12 @@ if (isset($_POST['connect'])) {
 
     session_commit();
 
-    //die("Connecté: $log $message" . " <a href='index.ctrl.php'>get back</a>");
+    //die("Connectï¿½: $log $message" . " <a href='index.ctrl.php'>get back</a>");
 } else if (isset($_POST['signup'])) {
     print('Trying to signup');
 
     if (!isset($_POST['user']) || $_POST['user'] == '' || !isset($_POST['password']) || $_POST['password'] == '') {
-        die("Impossible de récupérer les bons paramètres\n");
+        die("Impossible de rï¿½cupï¿½rer les bons paramï¿½tres\n");
     }
 
     $user = $_POST['user'];
@@ -50,7 +51,7 @@ if (isset($_POST['connect'])) {
 
     session_commit();
 
-    //die("Compte crée avec user $user" . " <a href='index.ctrl.php'>get back</a>");
+    //die("Compte crï¿½e avec user $user" . " <a href='index.ctrl.php'>get back</a>");
 }
 
 header('Location: parametres.ctrl.php');

@@ -33,7 +33,13 @@
                         <ul class="nav navbar-nav">
                             <li><a href="index.ctrl.php">Home</a></li>
                             <li class="active"><a href="parametres.ctrl.php">Paramètres</a></li>
-                            <li><a href="backoffice.ctrl.php">Backoffice (debug)</a></li>
+                            <?php
+                                if ($logged && $isAdmin):
+                            ?>
+                                <li><a href="backoffice.ctrl.php">Backoffice</a></li>
+                            <?php
+                                endif;
+                            ?>
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>

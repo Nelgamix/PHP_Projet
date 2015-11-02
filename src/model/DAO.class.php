@@ -2,6 +2,7 @@
 require_once('RSS.class.php');
 require_once('Nouvelle.class.php');
 require_once('Abonnement.class.php');
+require_once('Utilisateur.class.php');
 
 $dao = new DAO();
 
@@ -404,13 +405,99 @@ class DAO {
         return false;
     }
 
+    function isAdmin($user) {
+        $user = $this->db->quote($user);
+
+        $query = "SELECT * FROM utilisateur WHERE login = $user";
+
+        try {
+            $result = $this->db->query($query)->fetch();
+            if ($result != NULL && !empty($result) && $result['isAdmin'] == "true") {
+                return true;
+            }
+        } catch (PDOException $ex) {
+            die('PDOException: ' . $ex->getMessage());
+        }
+
+        return false;
+    }
+
+    function getAllUsers() {
+        $query = "SELECT * FROM utilisateur";
+
+        try {
+            $results = $this->db->query($query)->fetchAll(PDO::FETCH_CLASS, 'Utilisateur');
+
+            if (isset($results) && !empty($results)) {
+                $users = array();
+                foreach ($results as $result) {
+                    $users[$result->getLogin()] = $result;
+                }
+                return $users;
+            }
+        } catch (PDOException $ex) {
+            die('PDOException: ' . $ex->getMessage());
+        }
+    }
+
     // Créer un nouvel utilisateur avec le login $user et le mot de passe $password
     // Return true si l'utilisateur a été crée, false sinon
     function creerUtilisateur($user, $password) {
         $user = $this->db->quote($user);
         $password = $this->db->quote($password);
 
-        $query = "INSERT INTO utilisateur VALUES ($user, $password)";
+        $query = "INSERT INTO utilisateur VALUES ($user, $password, 'false')";
+
+        try {
+            $result = $this->db->exec($query);
+            if ($result > 0) {
+                return true;
+            }
+        } catch (PDOException $ex) {
+            die('PDOException: ' . $ex->getMessage());
+        }
+
+        return false;
+    }
+
+    function supprimerUtilisateur($user) {
+        $user = $this->db->quote($user);
+
+        $query = "DELETE FROM utilisateur WHERE login = $user";
+
+        try {
+            $result = $this->db->exec($query);
+            if ($result > 0) {
+                return true;
+            }
+        } catch (PDOException $ex) {
+            die('PDOException: ' . $ex->getMessage());
+        }
+
+        return false;
+    }
+
+    function promouvoirAdmin($user) {
+        $user = $this->db->quote($user);
+
+        $query = "UPDATE utilisateur SET isAdmin = 'true' WHERE login = $user";
+
+        try {
+            $result = $this->db->exec($query);
+            if ($result > 0) {
+                return true;
+            }
+        } catch (PDOException $ex) {
+            die('PDOException: ' . $ex->getMessage());
+        }
+
+        return false;
+    }
+
+    function supprimerAdmin($user) {
+        $user = $this->db->quote($user);
+
+        $query = "UPDATE utilisateur SET isAdmin = 'false' WHERE login = $user";
 
         try {
             $result = $this->db->exec($query);

@@ -39,6 +39,7 @@ if (isset($_POST['valider'])) {
 if (isset($_SESSION['user'])) {
     $logged = true;
     $user = $_SESSION['user'];
+    $isAdmin = $_SESSION['isAdmin'];
     if (isset($_GET['disconnect']) && $_GET['disconnect'] == "true") {
         if (session_destroy()) $logged = false;
     }

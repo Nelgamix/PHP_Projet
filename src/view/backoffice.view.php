@@ -26,8 +26,21 @@
                         <ul class="nav navbar-nav">
                             <li><a href="index.ctrl.php">Home</a></li>
                             <li><a href="parametres.ctrl.php">Paramètres</a></li>
-                            <li class="active"><a href="backoffice.ctrl.php">Backoffice (debug)</a></li>
+                            <?php
+                                if ($logged && $isAdmin):
+                            ?>
+                                <li class="active"><a href="backoffice.ctrl.php">Backoffice</a></li>
+                            <?php
+                                endif;
+                            ?>
                         </ul>
+                        <?php
+                            if ($logged):
+                        ?>
+                            <p class="navbar-text navbar-right">Connecté en tant que <a href="parametres.ctrl.php" class="navbar-link"><?= $user ?></a></p>
+                        <?php
+                            endif;
+                        ?>
                     </div><!--/.nav-collapse -->
                 </div>
             </nav>
@@ -70,13 +83,30 @@
                 <p>Actions sur flux distinct</p>
                 <ul>
                     <?php
-                        foreach ($v_rss as $rss) {
-                            print("<li><strong>{$rss->getTitre()} [{$rss->getId()}]</strong> &rightarrow; [Nouvelles: {$rss->nbNouvelles}] [Màj: {$rss->getDate()}] " .
-                                "<a href='index.ctrl.php?mode=2&id={$rss->getId()}' class='btn btn-xs btn-default'>Accéder</a> " .
-                                "<a href='backoffice.ctrl.php?action=update&id={$rss->getId()}' class='btn btn-xs btn-primary'>Mettre à jour</a> " .
-                                "<a href='backoffice.ctrl.php?action=clean&id={$rss->getId()}' class='btn btn-xs btn-warning'>Vider</a> " .
-                                "<a href='backoffice.ctrl.php?action=delete&id={$rss->getId()}' class='btn btn-xs btn-danger'>Supprimer</a></li>");
+                        if (!empty($v_rss)) {
+                            foreach ($v_rss as $rss) {
+                                print("<li><strong>{$rss->getTitre()} [{$rss->getId()}]</strong> &rightarrow; [Nouvelles: {$rss->nbNouvelles}] [Màj: {$rss->getDate()}] " .
+                                    "<a href='index.ctrl.php?mode=2&id={$rss->getId()}' class='btn btn-xs btn-default'>Accéder</a> " .
+                                    "<a href='backoffice.ctrl.php?action=update&id={$rss->getId()}' class='btn btn-xs btn-primary'>Mettre à jour</a> " .
+                                    "<a href='backoffice.ctrl.php?action=clean&id={$rss->getId()}' class='btn btn-xs btn-warning'>Vider</a> " .
+                                    "<a href='backoffice.ctrl.php?action=delete&id={$rss->getId()}' class='btn btn-xs btn-danger'>Supprimer</a></li>");
+                            }
+                        } else {
+                            print('<li>Aucun résultat à afficher ici</li>');
                         }
+                    ?>
+                </ul>
+                <p>Actions sur utilisateurs</p>
+                <ul>
+                    <?php
+                    if (!empty($users)) {
+                        foreach ($users as $userk) {
+                            print("<li><strong>{$userk->getLogin()}</strong> {$userk->adminBtn} " .
+                                "<a href='backoffice.ctrl.php?action=deleteUser&user={$userk->getLogin()}' class='btn btn-xs btn-danger'>Supprimer</a></li>");
+                        }
+                    } else {
+                        print('<li>Aucun résultat à afficher ici</li>');
+                    }
                     ?>
                 </ul>
             </div>

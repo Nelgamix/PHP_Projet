@@ -9,7 +9,6 @@
             <ul>
                 <li><a href="parametres.ctrl.php?deleteAll=true" class="btn btn-xs btn-danger"
                        title="Supprimer tous les abonnements du compte">Supprimer tous les abonnements</a></li>
-                <li>...</li>
             </ul>
         </div>
         <div>
@@ -17,10 +16,14 @@
                 <h4>Abonnements disponibles</h4>
                 <ul>
                     <?php
-                        foreach ($v_rss as $rss) {
-                            print("<li><strong>{$rss->getTitre()} [{$rss->getId()}]</strong> &rightarrow; [Màj: {$rss->getDate()}] " .
-                                "<a href='index.ctrl.php?mode=2&id={$rss->getId()}' class='btn btn-xs btn-default'>Accéder</a> " .
-                                "$rss->userBtn\n");
+                        if (!empty($v_rss)) {
+                            foreach ($v_rss as $rss) {
+                                print("<li><strong>{$rss->getTitre()} [{$rss->getId()}]</strong> &rightarrow; [Màj: {$rss->getDate()}] " .
+                                    "<a href='index.ctrl.php?mode=2&id={$rss->getId()}' class='btn btn-xs btn-default'>Accéder</a> " .
+                                    "$rss->userBtn\n");
+                            }
+                        } else {
+                            print("<li>Aucun flux n'est disponible.</li>");
                         }
                     ?>
                 </ul>
