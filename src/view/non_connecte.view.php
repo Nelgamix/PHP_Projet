@@ -1,7 +1,7 @@
 <fieldset>
     <legend>Compte</legend>
     <!--<div class="col-md-6 form_nc" style="border-left: 1px solid #d8d8d8">
-        <!-- FORM LOGIN ->
+        <!- FORM LOGIN ->
         <form action="login.ctrl.php" method="post">
             <table>
                 <thead>
@@ -28,7 +28,7 @@
     </div>-->
     <fieldset class="col-md-offset-1 col-md-4">
         <legend>Se connecter</legend>
-        <form action="login.ctrl.php" method="post" class="form-horizontal">
+        <form action="parametres.ctrl.php" method="post" class="form-horizontal">
             <div class="form-group">
                 <label for="user" class="col-sm-offset-1 col-sm-3 control-label">Utilisateur</label>
                 <div class="col-sm-6">
@@ -51,7 +51,7 @@
 
     <fieldset class="col-md-offset-2 col-md-4">
         <legend>S'inscrire</legend>
-        <form action="login.ctrl.php" method="post" class="form-horizontal">
+        <form action="parametres.ctrl.php" method="post" class="form-horizontal">
             <div class="form-group">
                 <label for="user" class="col-sm-offset-1 col-sm-3 control-label">Utilisateur</label>
                 <div class="col-sm-6">
@@ -74,7 +74,7 @@
 
 
     <!--<div class="col-md-6 form_nc">
-        <!-- FORM NOUVEL USER ->
+        <!- FORM NOUVEL USER ->
         <form action="login.ctrl.php" method="post">
             <table>
                 <thead>

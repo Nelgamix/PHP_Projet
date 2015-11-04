@@ -1,5 +1,5 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) { session_start(); }
 
 /*
  * Pour chaque parametre,
@@ -41,7 +41,7 @@ if (isset($_SESSION['user'])) {
     $user = $_SESSION['user'];
     $isAdmin = $_SESSION['isAdmin'];
     if (isset($_GET['disconnect']) && $_GET['disconnect'] == "true") {
-        if (session_destroy()) $logged = false;
+        if (session_destroy()) $logged = false; $message = '<div class="alert alert-success">Déconnexion réussie.</div>';
     }
 } else {
     $logged = false;

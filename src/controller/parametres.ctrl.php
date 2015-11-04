@@ -1,9 +1,14 @@
 <?php
 require_once('../../kint/Kint.class.php');
 require_once('../model/DAO.class.php');
-include_once('session.ctrl.php');
 
 $titrePrincipal = "Paramètres de l'application";
+
+if (isset($_POST['signup']) || isset($_POST['connect'])) {
+    include_once('login.ctrl.php');
+}
+
+include_once('session.ctrl.php');
 
 if ($logged) {
     foreach ($_POST as $k => $val) {
@@ -13,20 +18,32 @@ if ($logged) {
                 $nom = $_POST['nom'];
                 $categorie = $_POST['categorie'];
 
-                $dao->addAbonnement($user, $k, $nom, $categorie);
+                if ($dao->addAbonnement($user, $k, $nom, $categorie))
+                    $message = '<div class="alert alert-success">Ajout terminé.</div>';
+                else
+                    $message = '<div class="alert alert-warning">Ajout raté.</div>';
             }
         } else if ($val == "Se désabonner" || $val == "Supprimer") {
             // Supprimer
-            $dao->removeAbonnement($user, $k);
+            if ($dao->removeAbonnement($user, $k))
+                $message = '<div class="alert alert-success">Suppression terminé.</div>';
+            else
+                $message = '<div class="alert alert-warning">Suppression ratée.</div>';
         } else if ($val == "Changer le nom") {
             // Changer le nom
             if (isset($_POST['champPr']) && $_POST['champPr'] != '') {
-                $dao->changerNomAbonnement($user, $k, $_POST['champPr']);
+                if ($dao->changerNomAbonnement($user, $k, $_POST['champPr']))
+                    $message = '<div class="alert alert-success">Changement de nom terminé.</div>';
+                else
+                    $message = '<div class="alert alert-warning">Changement de nom raté.</div>';
             }
         } else if ($val == "Changer la catégorie") {
             // Changer la catégorie
             if (isset($_POST['champPr']) && $_POST['champPr'] != '') {
-                $dao->changerCategorieAbonnement($user, $k, $_POST['champPr']);
+                if ($dao->changerCategorieAbonnement($user, $k, $_POST['champPr']))
+                    $message = '<div class="alert alert-success">Changement de catégorie terminé.</div>';
+                else
+                    $message = '<div class="alert alert-warning">Changement de catégorie raté.</div>';
             }
         }
     }
@@ -48,8 +65,11 @@ if ($logged) {
         }
     }
 
-    if (isset($_POST['deleteAll']) && $_POST['deleteAll'] == "true") {
-        $dao->removeAllSubscriptions($user);
+    if (isset($_GET['deleteAll']) && $_GET['deleteAll'] == "true") {
+        if ($dao->removeAllSubscriptions($user))
+            $message = '<div class="alert alert-success">Suppression globale terminée.</div>';
+        else
+            $message = '<div class="alert alert-warning">Suppression globale ratée.</div>';
     }
 }
 
