@@ -61,6 +61,22 @@ class DAO {
         return array();
     }
 
+    function reinitBDD() {
+        try {
+            $query = "DELETE FROM abonnement; DELETE FROM nouvelle; DELETE FROM utilisateur WHERE login != 'admin'; DELETE FROM rss;"
+            . "DELETE FROM sqlite_sequence WHERE name = 'nouvelle' OR name = 'RSS';";
+            $r = $this->db->exec($query);
+
+            if ($r < 1) {
+                return false;
+            } else {
+                return true;
+            }
+        } catch (PDOException $ex) {
+            die('PDOException: ' . $ex->getMessage());
+        }
+    }
+
     //////////////////////////////////////////////////////////
     // Methodes CRUD sur RSS
     //////////////////////////////////////////////////////////
@@ -141,7 +157,7 @@ class DAO {
                 return $rss;
             }
         } catch (Exception $e) {
-            die("Error: " . $e->getMessage());
+            return false;
         }
     }
 
@@ -177,9 +193,6 @@ class DAO {
         try {
             $r = $this->db->exec($query);
             $this->db->exec($queryResetID);
-            /*if ($r < 1) {
-                return false;
-            }*/
         } catch (PDOException $ex) {
             die("PDO Error :" . $ex->getMessage());
         }
@@ -302,12 +315,14 @@ class DAO {
     // Met à jour le champ image de la nouvelle dans la base
     function updateImageNouvelle(Nouvelle $n, $RSS_id) {
         $imageUrl = $n->getImage();
+
         if (!($imageUrl == 'default')) {
+            $image = file_get_contents($imageUrl);
             $nouvelleUrl = $this->getIdNouvelle($n);
             $imageUrlLocal = '../model/images/' . $RSS_id . '_' . $nouvelleUrl . '.jpg';
 
             if (!file_exists($imageUrlLocal)) {
-                file_put_contents($imageUrlLocal, file_get_contents($imageUrl));
+                file_put_contents($imageUrlLocal, $image);
             }
         } else {
             $imageUrlLocal = '../model/images/default.jpg';
@@ -373,11 +388,13 @@ class DAO {
         $imgs = $this->getNouvellesFromId($id);
         $imgsLoc = array();
 
-        foreach ($imgs as $img) {
-            $imgsLoc[$img->getId()] = array(
-                                                'url' => $img->getImageLocale(),
-                                                'titre' => $img->getTitre()
-                                            );
+        if (isset($imgs) && !empty($imgs)) {
+            foreach ($imgs as $img) {
+                $imgsLoc[$img->getId()] = array(
+                    'url' => $img->getImageLocale(),
+                    'titre' => $img->getTitre()
+                );
+            }
         }
 
         return $imgsLoc;
@@ -511,6 +528,23 @@ class DAO {
         return false;
     }
 
+    function resetMdp($user) {
+        $user = $this->db->quote($user);
+
+        $query = "UPDATE utilisateur SET mp = 'defaut' WHERE login = $user";
+
+        try {
+            $result = $this->db->exec($query);
+            if ($result > 0) {
+                return true;
+            }
+        } catch (PDOException $ex) {
+            die('PDOException: ' . $ex->getMessage());
+        }
+
+        return false;
+    }
+
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Abonnements
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -535,7 +569,7 @@ class DAO {
 
         $query = "INSERT INTO abonnement VALUES ($user, $RSS_id, $nom, $categorie)";
 
-        if ($this->getRSSFromId($RSS_id) != NULL) {
+        if ($this->getRSSFromId($RSS_id) != false) {
             try {
                 $result = $this->db->exec($query);
 

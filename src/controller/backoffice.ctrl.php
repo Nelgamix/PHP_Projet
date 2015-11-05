@@ -1,6 +1,5 @@
 <?php
 require_once('../model/DAO.class.php');
-require_once('../../kint/Kint.class.php');
 require_once('session.ctrl.php');
 
 if ($_SESSION['isAdmin'] != true)
@@ -16,20 +15,32 @@ if (isset($_GET['action'])) {
         if ($id == 0) {
             // update all
             $v_rss = $dao->constructAllRSS();
-            foreach ($v_rss as $rss) {
-                $rss->update();
+            try {
+                foreach ($v_rss as $rss) {
+                    $rss->update();
+                }
+                $message = "<strong>Mise à jour réussie!</strong> " .
+                    "Tous les RSS ont bien été mis à jour.";
+                $alertType = "alert-success";
+            } catch (Exception $e) {
+                $message = "<strong>Mise à jour ratée.</strong> " .
+                    "Une erreur est survenue pendant la mise à jour. Vérifiez que l'url correspond à un RSS, et qu'il est valide.";
+                $alertType = "alert-warning";
             }
-            $message = "<strong>Mise à jour réussie!</strong> " .
-                "Tous les RSS ont bien été mis à jour.";
-            $alertType = "alert-success";
         } else {
             // update only one
             $rss = $dao->constructRSS($id);
             if (isset($rss)) {
-                $rss->update();
-                $message = "<strong>Mise à jour réussie!</strong> " .
-                    "Le RSS avec l'id $id a bien été mis à jour.";
-                $alertType = "alert-success";
+                try {
+                    $rss->update();
+                    $message = "<strong>Mise à jour réussie!</strong> " .
+                        "Le RSS avec l'id $id a bien été mis à jour.";
+                    $alertType = "alert-success";
+                } catch (Exception $e) {
+                    $message = "<strong>Mise à jour ratée.</strong> " .
+                        "Une erreur est survenue pendant la mise à jour. Vérifiez que l'url correspond à un RSS, et qu'il est valide. ({$e->getMessage()})";
+                    $alertType = "alert-warning";
+                }
             } else {
                 $message = "<strong>Mise à jour ratée.</strong> " .
                     "Le RSS avec l'id $id n'a pas pu être mis à jour. (vérifiez qu'il existe bien)";
@@ -97,7 +108,7 @@ if (isset($_GET['action'])) {
                 "Le RSS ($url) n'a pas été créé, vérifiez si il n'existe pas déjà, et si l'url est correcte.";
             $alertType = "alert-warning";
         }
-    } else if ($_GET['action'] == "deleteUser" || $_GET['action'] == "deleteAdmin" || $_GET['action'] == "addAdmin") {
+    } else if ($_GET['action'] == "deleteUser" || $_GET['action'] == "deleteAdmin" || $_GET['action'] == "addAdmin" || $_GET['action'] == "resetMdp") {
         if (isset($_GET['user']) && $_GET['user'] != "") {
             $userk = $_GET['user'];
             if ($_GET['action'] == "deleteUser") {
@@ -130,7 +141,24 @@ if (isset($_GET['action'])) {
                         "L'utilisateur $userk n'a pas été promu admin. Vérifiez qu'il n'était pas déjà admin.";
                     $alertType = "alert-warning";
                 }
+            } else if ($_GET['action'] == "resetMdp") {
+                if ($dao->resetMdp($userk)) {
+                    $message = "<strong>Mot de passe réinitialisé.</strong> " .
+                        "Le mot de passe de l'utilisateur $userk a bien été réinitialisé à 'defaut'.";
+                    $alertType = "alert-success";
+                } else {
+                    $message = "<strong>Mot de pass inchangé.</strong> " .
+                        "Le mot de passe de l'utilisateur $userk n'a pas été changé. Vérifiez que l'utilisateur existe.";
+                    $alertType = "alert-warning";
+                }
             }
+        }
+    } else if ($_GET['action'] == "deleteAll") {
+        // delete all
+        if ($dao->reinitBDD()) {
+
+        } else {
+
         }
     } else {
         $message = "<strong>Impossible de récupérer vos paramètres.</strong> " .

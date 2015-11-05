@@ -20,18 +20,17 @@
                             foreach ($v_rss as $rss) {
                                 print("<li><strong>{$rss->getTitre()} [{$rss->getId()}]</strong> &rightarrow; [Màj: {$rss->getDate()}] " .
                                     "<a href='index.ctrl.php?mode=2&id={$rss->getId()}' class='btn btn-xs btn-default'>Accéder</a> " .
-                                    "$rss->userBtn\n");
+                                    "$rss->userBtn</li></ul>\n");
                             }
+                            print("<div class=\"alert alert-warning\">
+                                       <strong>Informations complémentaires</strong> (optionnel: renseigner les champs suivants):<br />
+                                       Nom de l'ajout <input type=\"text\" name=\"nom\" />
+                                       Catégorie de l'ajout <input type=\"text\" name=\"categorie\" />
+                                   </div>");
                         } else {
-                            print("<li>Aucun flux n'est disponible.</li>");
+                            print("<li>Aucun flux n'est disponible.</li></ul>");
                         }
                     ?>
-                </ul>
-                <div class="alert alert-warning">
-                    <strong>Avant TOUT ajout</strong> (renseigner les champs suivants):<br />
-                    Nom de l'ajout <input type="text" name="nom" />
-                    Catégorie de l'ajout <input type="text" name="categorie" />
-                </div>
             </form>
         </div>
         <div>
@@ -45,17 +44,16 @@
                                 "<a href='index.ctrl.php?mode=2&id={$abo->getRSSid()}' class='btn btn-xs btn-default'>Accéder</a> " .
                                 "<input type='submit' class='btn btn-xs btn-success' name='{$abo->getRSSid()}' value='Changer le nom' /> " .
                                 "<input type='submit' class='btn btn-xs btn-success' name='{$abo->getRSSid()}' value='Changer la catégorie' /> " .
-                                "<input type='submit' class='btn btn-xs btn-warning' name='{$abo->getRSSid()}' value='Supprimer' /></li>\n");
+                                "<input type='submit' class='btn btn-xs btn-warning' name='{$abo->getRSSid()}' value='Supprimer' /></li></ul>\n");
                         }
+                        print("<div class=\"alert alert-warning\">
+                                   <strong>Information complémentaire</strong> (optionnel: renseigner le champ suivant):<br />
+                                   Nouveau nom/catégorie <input type=\"text\" name=\"champPr\" />
+                               </div>");
                     } else {
-                        print("<li>Aucun abonnement.</li>");
+                        print("<li>Aucun abonnement.</li></ul>");
                     }
                     ?>
-                </ul>
-                <div class="alert alert-warning">
-                    <strong>Avant TOUT changement</strong> (renseigner le champ suivant):<br />
-                    Nouveau nom/catégorie <input type="text" name="champPr" />
-                </div>
             </form>
         </div>
     </div>

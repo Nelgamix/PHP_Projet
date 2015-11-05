@@ -41,14 +41,14 @@
                         <?php
                             endif;
                         ?>
-                        <!--<ul class="nav navbar-right">
+                        <ul class="nav navbar-right">
                             <form class="navbar-form navbar-left" role="search" action="index.ctrl.php" method="GET">
                                 <div class="form-group">
                                     <input type="text" class="form-control input-sm" placeholder="Le Monde, ..." name="search">
                                 </div>
                                 <button type="submit" class="btn btn-sm btn-default">Rechercher</button>
                             </form>
-                        </ul>-->
+                        </ul>
                     </div><!--/.nav-collapse -->
                 </div>
             </nav>
@@ -72,76 +72,10 @@
         <div id="contents">
             <?php
                 include($includeFile);
-                /*$j = 1;
-
-                if ($i % 2 == 0) {
-                    print('<tr>');
-                }
-
-                print('<td><div>');
-
-                print("<h2>{$rss->getTitre()}</h2>");
-
-                foreach($rss->getNouvelles() as $nouvelle) {
-                    $titreNouvelle = trim($nouvelle->getTitre());
-                    $descriptionNouvelle = trim($nouvelle->getDescription());
-                    $dateNouvelle = trim($nouvelle->getDate());
-                    $linkNouvelle = $nouvelle->getUrl();
-
-                    // A BOUGER DANS LE CONTROLER
-                    if (strlen(utf8_decode($titreNouvelle)) > MAX_CHARACTERS_TITRE) {
-                        $titreNouvelle = mb_substr($titreNouvelle, 0, MAX_CHARACTERS_TITRE, 'UTF-8');
-                        $newChar = preg_split('//u', $titreNouvelle, -1, PREG_SPLIT_NO_EMPTY);
-                        for ($c = 2; $c != -1; $c--) {
-                            $newChar[MAX_CHARACTERS_TITRE - 1 - $c] = '.';
-                        }
-                        $titreNouvelle = implode('', $newChar);
-                    }
-
-                    print('<div class="nouvelle">');
-                    print('<span class="titre" title="'. $descriptionNouvelle .'">' . $titreNouvelle .
-                            '</span> - <span class="date">' . $dateNouvelle .
-                            '</span><span class="link"><a href="' . $linkNouvelle .
-                            '">Lire...</a></span>');
-                    print("</div>\n");
-                    if ($j++ > 19) {
-                        break;
-                    }
-                }
-
-                print('</div></td>');
-
-                if ($i % 2 == 1) {
-                    print('</tr>');
-                }
-
-                $i++;*/
-
-                /*print('<div class="rss">');
-                print('<a href="' . $rss->getUrl() . '" title="Aller sur le site propriétaire du RSS"'
-                        . ' target="_blank"><h1>' . $rss->getTitre() . '</h1></a>');
-
-                foreach($rss->getNouvelles() as $nouvelle) {
-                    print('<div class="nouvelle">');
-
-                    print('<a href="' . $nouvelle->getUrl() . '" title="Lire la suite..." target="_blank">'
-                            . '<img width="400" height="225" src="../controller/'
-                            . $nouvelle->getImageLocale() . '" alt="image nouvelle" /></a>');
-                    print('<a href="' . $nouvelle->getUrl() . '" title="Lire la suite..." target="_blank"><h2>'
-                            . $nouvelle->getTitre() . '</h2></a>');
-                    print('<div class="date">' . $nouvelle->getDate() . '</div>');
-                    print('<div class="description">' . $nouvelle->getDescription() . '</div>');
-
-                    print('</div>');
-                }
-
-                print('</div>');*/
             ?>
         </div>
         
-        <footer>
-            <p><strong>Copyright</strong> C 2015 (Haha)</p>
-        </footer>
+        <?php include('footer.php') ?>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="../../resources/js/bootstrap.min.js"></script>

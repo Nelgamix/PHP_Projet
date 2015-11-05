@@ -1,7 +1,6 @@
 <?php
 require_once('../model/DAO.class.php');
 require_once('../model/RSS.class.php');
-require_once('../../kint/Kint.class.php');
 include_once('session.ctrl.php');
 
 $titrePrincipal = "Projet M3104 - Programmation sur serveur web";

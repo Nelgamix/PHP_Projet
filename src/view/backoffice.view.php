@@ -79,6 +79,7 @@
                     <li><a href="backoffice.ctrl.php?action=update&id=0" class="btn btn-xs btn-primary">Mise à jour des flux</a></li>
                     <li><a href="backoffice.ctrl.php?action=clean&id=0" class="btn btn-xs btn-warning">Vidages des flux</a></li>
                     <li><a href="backoffice.ctrl.php?action=delete&id=0" class="btn btn-xs btn-danger">Suppression de tous les flux</a></li>
+                    <li><a href="backoffice.ctrl.php?action=deleteAll" class="btn btn-xs btn-danger">/!\ Réinitialisation complète de la base de données</a></li>
                 </ul>
                 <p>Actions sur flux distinct</p>
                 <ul>
@@ -102,6 +103,7 @@
                     if (!empty($users)) {
                         foreach ($users as $userk) {
                             print("<li><strong>{$userk->getLogin()}</strong> {$userk->adminBtn} " .
+                                "<a href='backoffice.ctrl.php?action=resetMdp&user={$userk->getLogin()}' class='btn btn-xs btn-warning'>Reset le mot de passe</a> " .
                                 "<a href='backoffice.ctrl.php?action=deleteUser&user={$userk->getLogin()}' class='btn btn-xs btn-danger'>Supprimer</a></li>");
                         }
                     } else {
@@ -112,16 +114,7 @@
             </div>
         </div>
 
-        <footer>
-            <div>
-                <?php
-                    /*foreach (glob("../model/images/2_*.jpg") as $image) {
-                        print('Deleting ' .$image . '...<br>');
-                        //unlink($image);
-                    }*/
-                ?>
-            </div>
-        </footer>
+        <?php include('footer.php'); ?>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="../../resources/js/bootstrap.min.js"></script>

@@ -1,7 +1,6 @@
 <?php
     // Test if login + psw = user
     // Else redirect with error
-    // TODO finir cette page
 
 session_start();
 require_once('../model/DAO.class.php');
@@ -18,7 +17,7 @@ if (isset($_POST['connect'])) {
         if ($log) {
             $_SESSION['user'] = $user;
             $_SESSION['isAdmin'] = $dao->isAdmin($user);
-            $message = '<div class="alert alert-success"><strong>Indentification finie!</strong><br>Vous êtes maintenant connecté.</div>';
+            $message = '<div class="alert alert-success"><strong>Indentification réussie!</strong><br>Vous êtes maintenant connecté.</div>';
         } else {
             $message = '<div class="alert alert-warning"><strong>Informations incorrectes.</strong><br>Veuillez vérifier les informations entrées et réessayer.</div>';
         }

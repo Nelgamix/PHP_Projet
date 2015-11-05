@@ -1,5 +1,4 @@
 <?php
-require_once('../../kint/Kint.class.php');
 require_once('../model/DAO.class.php');
 
 $titrePrincipal = "Paramètres de l'application";
@@ -14,7 +13,7 @@ if ($logged) {
     foreach ($_POST as $k => $val) {
         if ($val == "S'abonner") {
             // S'abonner
-            if (isset($_POST['nom']) && isset($_POST['categorie']) && $_POST['nom'] != '' && $_POST['categorie'] != '') {
+            if (isset($_POST['nom']) && isset($_POST['categorie'])) {
                 $nom = $_POST['nom'];
                 $categorie = $_POST['categorie'];
 

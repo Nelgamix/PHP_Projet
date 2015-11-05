@@ -25,7 +25,7 @@ class RSS {
         }
     }
     function getUrl()       { return $this->url; }
-    function getDate()      { return $this->date; }
+    function getDate()      { if (isset($this->date) && $this->date != '') return $this->date; else return 'Jamais'; }
     function getNouvelles() { return $this->nouvelles; }
     function getId()        { return $this->id; }
 
@@ -36,23 +36,21 @@ class RSS {
         global $dao;
         
         // On corrige les erreurs de typo dans les RSS (merci les developpeurs de RSS...)
-        $filename = 'xml_files/tmp.xml';
-        $str = implode("", file($this->url));
-        if (!file_exists($filename)) {
-            file_put_contents($filename, $str);
+        $content = file_get_contents($this->url);
+        if (!isset($content)) {
+            throw new Exception('Document invalide: impossible de récupérer le fichier');
+        } else if (substr($content, 0, 5) === "<?xml") {
+            $content = str_replace('&', '&amp;', $content);
+        } else {
+            throw new Exception('Document invalide: non xml');
         }
-        $fp = fopen($filename, 'w');
-        $newStr = str_replace('&', '&amp;', $str);
-        fwrite($fp, $newStr, strlen($newStr));
-        
+
         // Cree un objet pour accueillir le contenu du RSS : un document XML
         $doc = new DOMDocument;
 
-        // Telecharge le fichier XML
-        try {
-            $doc->load($filename);
-        } catch (Exception $e) {
-            throw $e;
+        // Parse le fichier XML
+        if (!$doc->loadXML($content)) {
+            throw new Exception('Document invalide: parse fail');
         }
 
         // Recupère les éléments principaux du flux

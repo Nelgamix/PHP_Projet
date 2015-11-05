@@ -8,6 +8,6 @@ class Abonnement {
 
     function getUser() { return $this->utilisateur_login; }
     function getRSSid() { return $this->RSS_id; }
-    function getCategorie() { return $this->categorie; }
-    function getNom() { return $this->nom; }
+    function getCategorie() { if (isset($this->categorie)) return $this->categorie; else return 'Pas de categorie'; }
+    function getNom() { if (isset($this->nom)) return $this->nom; else return 'Pas de nom'; }
 }

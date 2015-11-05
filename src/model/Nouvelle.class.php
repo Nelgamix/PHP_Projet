@@ -46,9 +46,16 @@ class Nouvelle {
         $this->description =  trim(preg_replace('/ +/', ' ', preg_replace('/[^A-Za-z0-9 ]/', ' ', urldecode(html_entity_decode(strip_tags($description->item(0)->textContent))))));
         $this->date =         $pubDate->item(0)->textContent;
         $this->url =          $link->item(0)->textContent;
-        if ($nodeEnclosure != NULL && $nodeEnclosure->item(0) != NULL)
-	        $this->image = $nodeEnclosure->item(0)->attributes->getNamedItem('url')->nodeValue;
-        else
+        if ($nodeEnclosure != NULL && $nodeEnclosure->item(0) != NULL) {
+            $image = $nodeEnclosure->item(0)->attributes->getNamedItem('url')->nodeValue;
+            $imageType = $nodeEnclosure->item(0)->attributes->getNamedItem('type')->nodeValue;
+
+            if ($imageType == 'image/jpeg') {
+                $this->image = $image;
+            } else {
+                $this->image = "default";
+            }
+        } else
             $this->image = "default";
     }
     
